@@ -1,11 +1,11 @@
 body{
-    background-color: beige;
+    background-color: #FFF8DC;
     margin: 0;
 }
 
 .navibar {
   height: 48px;
-  background: cornflowerblue;
+  background: white;
   margin: 0;
 }
 
@@ -26,7 +26,7 @@ body{
     float: right;
     display: inline;
     padding: 10px 20px;
-    color: whitesmoke;
+    color: dimgray;
 }
 
 .navibar ul li a:hover {
