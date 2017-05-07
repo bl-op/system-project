@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+	<title>New Project</title>
+
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/userpage">USERNAMEHERE</a>
+  <a href="/newProject">Start a Project</a>
+
+  <br><br>
+
+  </head>
+
+  <body>
+	<form action="NewProject.php" method="post">
+	   Project Title: <input type="text" name="projectTitle" required><br><br>
+	   Donation Goal: $ <input type="text" name="donationGoal" required><br><br>
+     Tag: <input type="text" name="projectTags" placeholder="Separate by commas" required><br><br>
+     <!--Category missing: drop down menu? -->
+     Project Beneficiary: <input type="text" name="beneficiary" required><br><br>
+     Beneficiary Location: <input type="textarea" name="beneficiaryLocation" required><br><br>
+
+     Cover Picture: <input type="file" name="projectImage"><br><br>
+
+     Project Description:<br><br>
+     <textarea name="projectDescription" style="width:350px; height:150px; padding:5px" required></textarea>
+
+	  <P><INPUT TYPE=SUBMIT VALUE="submit">
+	</FORM>
+  </body>
+</html>
