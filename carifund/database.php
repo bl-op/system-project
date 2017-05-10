@@ -10,16 +10,16 @@
 
    echo 'Connected successfully';
 
-   $sql = 'CREATE Database TESTA';
+   $sql = 'CREATE Database Carifund';
    $retval = mysql_query( $sql, $conn );
 
    if(! $retval ) {
       die('Could not create database: ' . mysql_error());
    }
 
-   echo "Database TESTA created successfully\n";
+   echo "Database Carifund created successfully\n";
 
-   mysql_select_db('TESTA');
+   mysql_select_db('Carifund');
 
    #=================create table: cfUsers
 
@@ -76,11 +76,6 @@
      }
 
      echo "Table created: cfDonations\n";
-
-     #=================dummy entries: cfUsers
-
-     $sql = 'insert into cfUsers (firstname, lastname, email, password)'.
-     'values ("Azmie", "Binti", "azmirdottir@some", 123);';
 
      mysql_close($conn);
 ?>
