@@ -2,32 +2,46 @@
 
 <html>
   <head>
-	<title>New Project</title>
+  <title>CariFund - New Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="resources\css\stylesheet.css">
 
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/userpage">USERNAMEHERE</a>
-  <a href="/newProject">Start a Project</a>
-
-  <br><br>
+  <div class="navibar">
+      <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Start a Project</a></li>
+          <li><a href="home.html">Home</a></li>
+      </ul>
+  </div>
 
   </head>
 
   <body>
-	<form action="NewProject.php" method="post">
-	   Project Title: <input type="text" name="projectTitle" required><br><br>
-	   Donation Goal: $ <input type="text" name="donationGoal" required><br><br>
-     Tag: <input type="text" name="projectTags" placeholder="Separate by commas" required><br><br>
-     <!--Category missing: drop down menu? -->
-     Project Beneficiary: <input type="text" name="beneficiary" required><br><br>
-     Beneficiary Location: <input type="textarea" name="beneficiaryLocation" required><br><br>
+    <br><br>
+  	<form action="forms.php" method="post">
+  	   <p>Project Title: <input type="text" name="projectTitle" required></p>
+       <p>Project Beneficiary: <input type="text" name="beneficiary" required></p>
+       <p>Beneficiary Location: <input type="textarea" name="beneficiaryLocation" required></p>
 
-     Cover Picture: <input type="file" name="projectImage"><br><br>
+  	   <p>Donation Goal: $ <input type="text" name="donationGoal" required></p>
+       <p>Tag: <input type="text" name="projectTags" placeholder="Separate tags by commas" required></p>
+       <p>Category:
+       <select name="category" style="float:right" required>
+          <option value="Poverty">Poverty</option>
+          <option value="Education">Education</option>
+          <option value="Health">Health</option>
+          <option value="Animals">Animals</option>
+          <option value="Environment">Environment</option>
+          <option value="Other">Other</option>
+       </select></p>
 
-     Project Description:<br><br>
-     <textarea name="projectDescription" style="width:350px; height:150px; padding:5px" required></textarea>
+       <p>Project Description:</p>
+       <textarea name="projectDesc" style="width:100%; height:150px; padding:5px" required></textarea>
+       <p>Cover Picture: <input type="file" name="projectImg"></p>
 
-	  <P><INPUT TYPE=SUBMIT VALUE="submit">
-	</FORM>
+  	  <P><INPUT TYPE=SUBMIT VALUE="Submit" name="new-project" style="width: 75px">
+  	</FORM>
   </body>
 </html>

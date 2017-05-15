@@ -24,5 +24,16 @@
       '<br>';
   }
 
+  $stmt = $pdo->query('SELECT * FROM cfProjects');
+
+  echo "Projects table: <br>";
+
+  while ($row = $stmt->fetch())
+  {
+      echo $row['projectID'] . " | " . $row['projectTitle'] . " | " . $row['beneficiary'].
+      $row['beneficiaryLocation'] . ' | ' . $row['donationProgress'] .
+      ' out of ' . $row['donationGoal'] .'<br>';
+  }
+
 
 ?>

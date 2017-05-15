@@ -3,6 +3,17 @@ body{
     margin: 0;
 }
 
+/*Please inform if it's in conflict with other webpages: form and input*/
+
+form{
+  padding: 0px 30%;
+}
+
+input{
+  width: 250px;
+  float: right;
+}
+
 .navibar {
   height: 48px;
   background: white;
