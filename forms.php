@@ -49,4 +49,17 @@
 
   } #The end brace to decide which form
 
+#Form: Member Sign-up
+if(!empty($_POST['create'])) {
+  $sql = "insert into cfUsers (firstname, lastname, email, password)".
+   "values ('{$_POST['firstname']}','{$_POST['lastname']}','{$_POST['email']}','{$_POST['password']}');";
+
+   $retval = mysql_query($sql, $conn);
+
+   if($retval){
+     echo "New member added!<br>";
+   } else {
+     echo "Error!<br>" . mysql_error();
+   }
+}
  ?>
