@@ -1,6 +1,8 @@
 body{
     background-color: #FFF8DC;
+		font-family: Trebuchet MS;
     margin: 0;
+		
 }
 
 /*Please inform if it's in conflict with other webpages: form and input*/
@@ -50,8 +52,20 @@ body{
   background-color: gray;
 }
 
+.info{
+	background-color: gray;
+	margin-top: 0px;
+	}
+
+.info_table{
+	color: white;
+	margin-top: 0px;
+	text-align: center;
+	padding: 20px;
+	}
+
 .loginform{
-	height:400px;
+	height:420px;
 	width:290px;
 	margin:80px 530px;
 	border: 10px #CCC solid;
@@ -78,7 +92,7 @@ body{
 }
 
 .signupform{
-	height:480px;
+	height:490px;
 	width:290px;
 	margin:80px 530px;
 	border: 10px #CCC solid;
@@ -110,6 +124,7 @@ body{
   font-weight: bold;
 	color: white;
 	width: 290px;
+	height: 45px;
 	padding: 14px 20px;
 	margin: auto;
 	border: none;

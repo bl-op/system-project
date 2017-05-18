@@ -20,7 +20,7 @@
 
   while ($row = $stmt->fetch())
   {
-      echo $row['userID'] . " | " . $row['firstname'] . " | " . $row['lastname'].
+      echo $row['userID'] . " | " . $row['firstname'] . " | " . $row['lastname']." | " . $row['password'].
       '<br>';
   }
 
