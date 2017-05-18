@@ -29,7 +29,7 @@
                 	<input type="password" placeholder="Enter password" id="password" name="password" required>
                     <input type="password" placeholder="Confirm password" id="confirm_password" name="confirm_password"required>
                     <br></br>
-                	<input type="submit" name="create" value="Create Account!" class="btn">
+                	<input type="submit" name="create" value="Create Account!" onclick="signup()" class="btn">
             </form>
         </div>
         
@@ -58,17 +58,18 @@
 </html>
 
 <script>
-var password = document.getElementById("password")
-var confirm_password = document.getElementById("confirm_password");
 
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Do Not Match!");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
+function signup(){
+    // check if password and confirm password match; allows account to be created if it's valid.
+    var password = document.getElementById("password")
+    var confirm_password = document.getElementById("confirm_password");
+    
+    if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords Do Not Match!");
+        } else {
+            confirm_password.setCustomValidity('');
+            }
+            
 }
 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
 </script>

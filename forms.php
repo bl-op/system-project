@@ -58,8 +58,11 @@ if(!empty($_POST['create'])) {
 
    if($retval){
      echo "New member added!<br>";
+     header('Location: login.html');
    } else {
      echo "Error!<br>" . mysql_error();
+     header('Location: signup.html');
    }
+
 }
  ?>
