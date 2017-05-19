@@ -16,16 +16,18 @@
             </ul>
         </div>
         </header>
-        <div class="loginform" method="post">
+        <div class="loginform">
+            <form action="login.php" method="post">
                 	<h1 style="font-family:Trebuchet MS;color:dimgray; text-align: center;">Welcome!</h1>
                 	<label style="color:dimgray"><b> Email </b></label>
-                 	<input type="text" placeholder="Enter Email" name="Email">
+                 	<input type="text" placeholder="Enter Email" name="useremail">
                 	<br></br>
                 	<label style="color:dimgray"><b> Password</b></label>
-                	<input type="password" placeholder="Enter password" name="password">
+                	<input type="password" placeholder="Enter password" name="userpassword">
                     <br></br>
                 	<input type="submit" name="login" class="btn" value="Login!">
-
+                    </form>
+                    
             <form action="signup.html">
                 	<p style="font-family:Trebuchet MS; size:big;color:dimgray">Are you new? Join us now!</p>
                 	<button><b>Sign up!</b></button>

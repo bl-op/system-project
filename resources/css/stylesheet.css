@@ -6,9 +6,11 @@ body{
 }
 
 /*Please inform if it's in conflict with other webpages: form and input*/
-
+.newproject{
+	height: 700px;
+}
 .newproject form{
-  padding: 0px 30%;
+  padding: 0px 30%;;
 }
 
 .newproject input{
