@@ -1,5 +1,5 @@
 body{
-    background-color: #FFF8DC;
+    background-color: white;
 		font-family: Trebuchet MS;
     margin: 0;
 		
@@ -18,7 +18,7 @@ body{
 
 .navibar {
   height: 48px;
-  background: white;
+  background: mediumseagreen;
   margin: 0;
 }
 
@@ -39,16 +39,14 @@ body{
     float: right;
     display: inline;
     padding: 10px 20px;
-    color: dimgray;
+    color: white;
 }
 
 .navibar ul li a:hover {
-  color: white;
   background-color: gray;
 }
 
 .navibar ul li a:active {
-  color: white;
   background-color: gray;
 }
 
