@@ -1,3 +1,12 @@
+<?php
+
+    include('login.php');
+
+    if isset($_SESSION['login_user']))
+    {header("location: userhome.html");
+    }
+?>
+
 <html>
     <head>
         <title>Login</title>
@@ -17,6 +26,7 @@
         </div>
         </header>
         <div class="loginform" method="post">
+
                 	<h1 style="font-family:Trebuchet MS;color:dimgray; text-align: center;">Welcome!</h1>
                 	<label style="color:dimgray"><b> Email </b></label>
                  	<input type="text" placeholder="Enter Email" name="Email">
@@ -29,6 +39,7 @@
             <form action="signup.html">
                 	<p style="font-family:Trebuchet MS; size:big;color:dimgray">Are you new? Join us now!</p>
                 	<button><b>Sign up!</b></button>
+                    <span><?php echo $error;?></span>
             </form>
         </div>
 
