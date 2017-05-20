@@ -17,7 +17,6 @@ if (isset($_POST['Login'])){
         $password = mysql_real_escape_string($password);
 
         $db = mysql_select_db("cfUsers", $connection);
-
         $query = mysql_query("select * from login where email='$email' AND password='$password'", $connection);
         $rows = mysql_num_rows($query);
 
