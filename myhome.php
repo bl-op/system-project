@@ -12,7 +12,7 @@
             <ul>
                 <li><a href="logout.php">Logout</a></li>  
                 <li><a href="#">Profile</a></li>                
-                <li><a href="newproject.html">Start a Project</a></li>
+                <li><a href="newproject.php">Start a Project</a></li>
                 <li><a href="myhome.php">Home</a></li>
             </ul>
         </div>

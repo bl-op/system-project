@@ -50,7 +50,7 @@
       <div style="padding: 10px 15%">
         
        <img src="http://placehold.it/500x350" id="cover">
-       <h1 style="margin-bottom:0px"><?php echo $result[0]["projectTitle"]?></h1>
+       <h1 style="margin-bottom:-15px"><?php echo $result[0]["projectTitle"]?></h1>
        
        <p id="category"><?php echo $result[0]["projectCategory"]?></p>
        <p id="tag"><?php echo $result[0]["projectTags"]?></p>
@@ -81,9 +81,13 @@
         <div class="fb-save" data-uri="https://www.google.com" data-size="small"></div>
       </div>
       
+      <!--Owner of the Project Here-->
+      <h3 style="margin-bottom:3px"><?php echo $result[0]['ownerID'] ?></h3>
+      <p style="margin-top:0px">Organizer</p>
+      
       <div style="background-color:mediumseagreen; width:100%; height:10px; margin: 10px 0px"></div>
-    
-       <p id="description">Project Details</p>
+      
+       <h3 id="description">Project Details</h3>
        <?php echo $result[0]["projectDesc"]?>
        </div>
     </body>

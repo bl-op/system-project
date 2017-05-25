@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -26,7 +30,7 @@
        <p>Project Beneficiary: <input type="text" name="beneficiary" required></p>
        <p>Beneficiary Location: <input type="textarea" name="beneficiaryLocation" required></p>
 
-  	   <p>Donation Goal: $ <input type="text" name="donationGoal" required></p>
+  	   <p>Donation Goal: $ <input type="number" name="donationGoal" required></p>
        <p>Tag: <input type="text" name="projectTags" placeholder="Separate tags by commas" required></p>
        <p>Category:
        <select name="category" style="float:right" required>
@@ -42,12 +46,16 @@
        <textarea name="projectDesc" style="width:100%; height:150px; padding:5px" required></textarea>
        <p>Cover Picture: <input type="file" name="projectImg"></p>
        <br></br>
+       
+       <div style="display:none">
+         <input type="text" name="ownerID" id="userID">
+       </div>
+       
   	  <P><INPUT TYPE=SUBMIT VALUE="Submit" name="new-project" style="width: 75px">
   	</FORM>
     </div>
 
     <div class="info">
-
 
           	<table style="width:100%" class="info_table">
                 	<tr>
@@ -68,4 +76,14 @@
 
      	</div>
   </body>
+  
+<script>
+
+fillUserIDfornow();
+
+function fillUserIDfornow(){
+  document.getElementById("userID").value ="ASK1";
+}
+
+</script>
 </html>

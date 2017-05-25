@@ -5,7 +5,67 @@ body{
 		
 }
 
-/*Please inform if it's in conflict with other webpages: form and input*/
+#cover{
+  float: right;
+  width: 500px;
+  height: 350px;
+  margin-left: 10px;
+}
+
+#category{
+  padding: 3px;
+  background-color: grey;
+  border-radius: 10px;
+  display: inline-block;
+  color: white;
+}
+
+#tag{
+  padding:3px;
+  background-color: mediumseagreen;
+  border-radius: 10px;
+  display: inline-block;
+  color: white;
+}
+
+#beneficiary{
+  font-size: 25px;
+  margin-top: 0px;
+}
+
+#location{
+  color: dimgrey;
+  font-size: 15px;
+}
+
+#donationAmount{
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+#donationMeter{
+  background-color: dimgrey;
+  height: 30px;
+  width: 30%;
+  margin: 4px 0px;
+  border-radius: 10px
+}
+
+#donationProgress{
+  background-color: mediumseagreen;
+  height: 30px;
+  width: 0px;
+  border-radius: 10px;
+}
+
+#donate{
+  display: inline-block;
+  color: white;
+  background-color: mediumseagreen;
+  border-radius: 10px;
+}
+
+
 .newproject{
 	height: 700px;
 }

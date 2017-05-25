@@ -53,6 +53,7 @@
          ' projectCategory enum("Health", "Poverty",'.
          ' "Education", "Animals", "Environment", "Other") not null,'.
          ' projectDesc text not null,'.
+         ' ownerID text not null,'.
          ' projectImg blob,'.
          ' primary key(projectID));';
 
