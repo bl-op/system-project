@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>CariFund</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="resources\css\stylesheet.css">
@@ -9,29 +10,15 @@
         <header>
         <div class="navibar">
             <ul>
-                <li><a href="signup.html">Sign Up</a></li>                
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="carifund.html">Home</a></li>
+                <li><a href="logout.php">Logout</a></li>  
+                <li><a href="#">Profile</a></li>                
+                <li><a href="newproject.html">Start a Project</a></li>
+                <li><a href="myhome.php">Home</a></li>
             </ul>
         </div>
         </header>
-        <div class="loginform">
-            <form action="login.php" method="post">
-                	<h1 style="font-family:Trebuchet MS;color:dimgray; text-align: center;">Welcome!</h1>
-                	<label style="color:dimgray"><b> Email </b></label>
-                 	<input type="text" placeholder="Enter Email" name="useremail">
-                	<br></br>
-                	<label style="color:dimgray"><b> Password</b></label>
-                	<input type="password" placeholder="Enter password" name="userpassword">
-                    <br></br>
-                	<input type="submit" name="login" class="btn" value="Login!">
-                    </form>
-                    
-            <form action="signup.html">
-                	<p style="font-family:Trebuchet MS; size:big;color:dimgray">Are you new? Join us now!</p>
-                	<button><b>Sign up!</b></button>
-            </form>
+        <div>
+           <!-- add contents here  -->
         </div>
 
        <div class="info">

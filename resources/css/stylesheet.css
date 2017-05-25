@@ -1,14 +1,16 @@
 body{
-    background-color: #FFF8DC;
+    background-color: white;
 		font-family: Trebuchet MS;
     margin: 0;
 		
 }
 
 /*Please inform if it's in conflict with other webpages: form and input*/
-
+.newproject{
+	height: 700px;
+}
 .newproject form{
-  padding: 0px 30%;
+  padding: 0px 30%;;
 }
 
 .newproject input{
@@ -18,7 +20,7 @@ body{
 
 .navibar {
   height: 48px;
-  background: white;
+  background: mediumseagreen;
   margin: 0;
 }
 
@@ -39,16 +41,14 @@ body{
     float: right;
     display: inline;
     padding: 10px 20px;
-    color: dimgray;
+    color: white;
 }
 
 .navibar ul li a:hover {
-  color: white;
   background-color: gray;
 }
 
 .navibar ul li a:active {
-  color: white;
   background-color: gray;
 }
 

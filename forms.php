@@ -45,6 +45,17 @@
   }
 
   #Form: Member Sign-up
+  // check if email already being used; prevent duplicate user email
+  if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+      exit("Invalid email address"); 
+  $select = mysql_query("SELECT `email` FROM `cfUsers` WHERE `email` = '".$_POST['email']."'") or exit(mysql_error());
+  if(mysql_num_rows($select)){
+      echo "This email is already being used.";
+      header("Location: signup.html");
+      exit;
+  } 
+
+  // add new user when email is not used 
   if(!empty($_POST['create'])) {
     $sql = "insert into cfUsers (firstname, lastname, email, password)".
      "values ('{$_POST['firstname']}','{$_POST['lastname']}','{$_POST['email']}','{$_POST['password']}');";
@@ -53,13 +64,15 @@
 
      if($retval){
        echo "New member added!<br>";
-       header('Location: login.html');
+       header("Location: login.html");
      } else {
        echo "Error!<br>" . mysql_error();
-       header('Location: signup.html');
+       header("Location: signup.html");
      }
+
   }
   
+  #Donation History
   if(!empty($_POST['donate'])){
     
     $sql  = "insert into cfDonations (donorID, projectID, amount)".
