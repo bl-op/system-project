@@ -41,28 +41,41 @@
       echo "Entered successfully.<br>";
     } else {
       echo "No good.<br>" . mysql_error();
-    } #End of Form: New Project
+    } 
+  }
 
-    // elseif (!empty($_POST['submission button's name here])) {
-    //   # code...
-    // }
+  #Form: Member Sign-up
+  if(!empty($_POST['create'])) {
+    $sql = "insert into cfUsers (firstname, lastname, email, password)".
+     "values ('{$_POST['firstname']}','{$_POST['lastname']}','{$_POST['email']}','{$_POST['password']}');";
 
-  } #The end brace to decide which form
+     $retval = mysql_query($sql, $conn);
 
-#Form: Member Sign-up
-if(!empty($_POST['create'])) {
-  $sql = "insert into cfUsers (firstname, lastname, email, password)".
-   "values ('{$_POST['firstname']}','{$_POST['lastname']}','{$_POST['email']}','{$_POST['password']}');";
-
-   $retval = mysql_query($sql, $conn);
-
-   if($retval){
-     echo "New member added!<br>";
-     header('Location: login.html');
-   } else {
-     echo "Error!<br>" . mysql_error();
-     header('Location: signup.html');
-   }
-
-}
+     if($retval){
+       echo "New member added!<br>";
+       header('Location: login.html');
+     } else {
+       echo "Error!<br>" . mysql_error();
+       header('Location: signup.html');
+     }
+  }
+  
+  if(!empty($_POST['donate'])){
+    
+    $sql  = "insert into cfDonations (donorID, projectID, amount)".
+    "values ('{$_POST['userID']}', '{$_POST['projID']}', {$_POST['amount']});";
+    
+    $retval = mysql_query($sql, $conn);
+    
+    $sql  = "UPDATE cfProjects SET donationProgress = donationProgress + {$_POST['amount']}".
+    " WHERE projectID='{$_POST['projID']}';";
+    
+    $retval = mysql_query($sql, $conn);
+    
+    if($retval){
+      header('Location: project.php?id='.$_POST['projID']);
+    } else {
+      echo "Error!<br>" . mysql_error();
+    }
+  }
  ?>

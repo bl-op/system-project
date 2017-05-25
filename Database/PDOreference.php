@@ -20,13 +20,13 @@
 
   while ($row = $stmt->fetch())
   {
-      echo $row['userID'] . " | " . $row['firstname'] . " | " . $row['lastname']." | " . $row['password'].
+      echo $row['userID'] . " | " . $row['firstname'] . " | " . $row['lastname']." | " . $row['email'].
       '<br>';
   }
 
   $stmt = $pdo->query('SELECT * FROM cfProjects');
 
-  echo "Projects table: <br>";
+  echo "<br><br>Projects table: <br>";
 
   while ($row = $stmt->fetch())
   {
