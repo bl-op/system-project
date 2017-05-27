@@ -56,13 +56,13 @@ public class DataStructure {
     
     public static void showCongkak(){
         System.out.print("USER HOME: " + userHome + "     ");
-        for(int i = 0; i<congkak.length; i++){
-            if(i==seedPool){
-                System.out.print("\nENEMY HOME: " + enemyHome + "    ");
-            }
+        for(int i = 0; i<seedPool; i++){
             System.out.print("("+i+") "+congkak[i] + "    ");
         }
-        
+        System.out.print("\nENEMY HOME: " + enemyHome + "    ");
+        for(int i = seedPool*2-1; i>=seedPool; i--){
+            System.out.print("("+i+") "+congkak[i] + "    ");
+        }
     }
     
     public static void sowSeeds(int index){
