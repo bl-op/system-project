@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class DataStructure {
     
         static int[] congkak;
-        static int userHome, enemyHome, seedPool;
+        static int userHome = 0, enemyHome = 0, seedPool;
         static boolean userTurn = true;
+        
 
     public static void main(String[] args) {
         
@@ -14,8 +15,8 @@ public class DataStructure {
         
         System.out.print("What Level? Right now, only 1 - 3: ");
         initializeLevel(sc.nextInt());
+        System.out.println();
         showCongkak();
-        
         
         
     }
@@ -26,9 +27,7 @@ public class DataStructure {
             
             case 1:
                 //congkak total holes: 12
-                congkak = new int[12];
-                userHome = 10;
-                enemyHome = 11;
+                congkak = new int[10];
                 seedPool = 5;
                 fillCongkak();
                 System.out.println("The Board has been initialized.");
@@ -37,9 +36,7 @@ public class DataStructure {
             case 2:
             case 3:
                 //congkak total holes: 16
-                congkak = new int[16];
-                userHome = 14;
-                enemyHome = 15;
+                congkak = new int[14];
                 seedPool = 7;
                 fillCongkak();
                 System.out.println("The Board has been initialized.");
@@ -58,19 +55,37 @@ public class DataStructure {
     }
     
     public static void showCongkak(){
-        for(int i = 0; i<congkak.length-2; i++){
+        System.out.print("USER HOME: " + userHome + "     ");
+        for(int i = 0; i<congkak.length; i++){
             if(i==seedPool){
-                System.out.println("    USER HOME: " + congkak[userHome]);
+                System.out.print("\nENEMY HOME: " + enemyHome + "    ");
             }
             System.out.print("("+i+") "+congkak[i] + "    ");
         }
-        System.out.println("ENEMY HOME: " + congkak[enemyHome]);
+        
     }
     
     public static void sowSeeds(int index){
+        /*
+        User Homes: 0 - 6
+        Enemy Homes: 7 - 13
         
-        //Sow seed time
+        If loop index to 13>x, go back to 0
+        If UserTurn TRUE -> Last Loop Empty in 0-6, take +7's seeds -> userHome
+                         -> Last Loop Empty in 7-13, skip turn??? don't know; checking PDF
         
+        */
+        
+        int toSow = congkak[index];
+        
+        while(true){
+            
+        }
+        
+    }
+    
+    public static void checkVictory(){
+        //if userHome/enemyHome is empty, the other wins
     }
     
     
