@@ -1,6 +1,7 @@
 <?php
 
 ob_start();
+session_start();
   $dbhost = 'localhost';
   $dbuser = 'root';
   $dbpass = '';
@@ -21,14 +22,14 @@ $userpassword=$_POST['userpassword'];
 $useremail = mysql_real_escape_string($useremail);
 $userpassword = mysql_real_escape_string($userpassword);
 $result=mysql_query("SELECT * FROM cfUsers WHERE email='$useremail' and password='$userpassword'");
-
+$row=mysql_fetch_array($result);
 // count table row
 $count=mysql_num_rows($result);
 
-// table row is 1 row when $useremail and userpassword is valid
+// table row is 1 row when $useremail and $userpassword is valid
 if($count==1){
 
-$_SESSION['user'] = $row['userID'];
+$_SESSION['useremail'] = $useremail; // initialize session
 header("location:myhome.php");
 }
 else {

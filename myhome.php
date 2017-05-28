@@ -1,7 +1,11 @@
+<?php
+include("session.php");
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CariFund</title>
+        <title>Home|<?php echo $row['firstname']. $row['lastname']; ?></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="resources\css\stylesheet.css">
@@ -44,3 +48,4 @@
      	</div>
     </body>
 </html>
+<?php ob_end_flush(); ?>

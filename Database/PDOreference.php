@@ -15,7 +15,7 @@
   echo "Users in cfUsers table: <br>";
   while ($row = $stmt->fetch())
   {
-      echo $row['userID'] . " | " . $row['firstname'] . " | " . $row['lastname']." | " . $row['lastname']." | " . $row['password'].
+      echo $row['userID'] . " | " . $row['firstname'] . " | " . $row['lastname']." | " . $row['email']." | " . $row['password'].
       '<br>';
   }
   $stmt = $pdo->query('SELECT * FROM cfProjects');
