@@ -49,7 +49,16 @@
       
       <div style="padding: 10px 15%">
         
-       <img src="http://placehold.it/500x350" id="cover">
+        <?php 
+        
+        if($result[0]['projectImg']!="NONE"){
+          $img = $result[0]['projectImg'];
+        } else {
+          $img = "resources/carifund.png";
+        }
+        
+        ?>
+       <img src=<?php echo $img ?> id="cover">
        <h1 style="margin-bottom:-15px"><?php echo $result[0]["projectTitle"]?></h1>
        
        <p id="category"><?php echo $result[0]["projectCategory"]?></p>
