@@ -44,7 +44,7 @@ include("session.php");
 
        <p>Project Description:</p>
        <textarea name="projectDesc" style="width:100%; height:150px; padding:5px" required></textarea>
-       <p>Cover Picture: <input type="file" name="projectImg"></p>
+       <p>Cover Picture: <input type="text" name="projectImg"></p>
        <br></br>
        
        <div style="display:none">

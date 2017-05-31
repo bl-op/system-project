@@ -54,7 +54,7 @@
          ' "Education", "Animals", "Environment", "Other") not null,'.
          ' projectDesc text not null,'.
          ' ownerID text not null,'.
-         ' projectImg blob,'.
+         ' projectImg text,'.
          ' primary key(projectID));';
 
    $retval = mysql_query($sql, $conn);
@@ -82,6 +82,5 @@
 
      echo "Table created: cfDonations<br>";
 
-     //NEED TO DO: Normalized table for userProjects
      mysql_close($conn);
 ?>

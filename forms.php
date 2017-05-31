@@ -15,15 +15,15 @@ if($conn ) {
 
 # Form: New Project
 if(!empty($_POST['new-project'])) {
-  $projectTitle = $_POST['projectTitle'];
-  $beneficiary = $_POST['beneficiary'];
-  $beneficiaryLocation = $_POST['beneficiaryLocation'];
+  $projectTitle = str_replace("'", "''", $_POST['projectTitle']);
+  $beneficiary = str_replace("'", "''", $_POST['beneficiary']);
+  $beneficiaryLocation = str_replace("'", "''", $_POST['beneficiaryLocation']);
+  $projectTags = str_replace("'", "''", $_POST['projectTags']);
+  $projectDesc = str_replace("'", "''", $_POST['projectDesc']);
   $donationGoal = $_POST['donationGoal'];
-  $projectTags = $_POST['projectTags'];
   $category = $_POST['category'];
-  $projectDesc = $_POST['projectDesc'];
   $ownerID = $_POST['ownerID'];
-
+  
   if(empty($_POST['projectImg'])){
     $projectImg = "NONE";
   } else {
