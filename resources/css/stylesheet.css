@@ -1,11 +1,87 @@
 body{
-    background-color: #FFF8DC;
+    background-color: white;
+		font-family: Trebuchet MS;
     margin: 0;
+		
+}
+
+#cover{
+  float: right;
+  width: 500px;
+  height: 350px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+#category{
+  padding: 3px;
+  background-color: grey;
+  border-radius: 10px;
+  display: inline-block;
+  color: white;
+}
+
+#tag{
+  padding:3px;
+  background-color: mediumseagreen;
+  border-radius: 10px;
+  display: inline-block;
+  color: white;
+}
+
+#beneficiary{
+  font-size: 25px;
+  margin-top: 0px;
+}
+
+#location{
+  color: dimgrey;
+  font-size: 15px;
+}
+
+#donationAmount{
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+#donationMeter{
+  background-color: dimgrey;
+  height: 30px;
+  width: 30%;
+  margin: 4px 0px;
+  border-radius: 10px
+}
+
+#donationProgress{
+  background-color: mediumseagreen;
+  height: 30px;
+  width: 0px;
+  border-radius: 10px;
+}
+
+#donate{
+  display: inline-block;
+  color: white;
+  background-color: mediumseagreen;
+  border-radius: 10px;
+}
+
+
+.newproject{
+	height: 700px;
+}
+.newproject form{
+  padding: 0px 30%;;
+}
+
+.newproject input{
+  width: 250px;
+  float: right;
 }
 
 .navibar {
   height: 48px;
-  background: white;
+  background: mediumseagreen;
   margin: 0;
 }
 
@@ -26,15 +102,92 @@ body{
     float: right;
     display: inline;
     padding: 10px 20px;
-    color: dimgray;
+    color: white;
 }
 
 .navibar ul li a:hover {
-  color: white;
   background-color: gray;
 }
 
 .navibar ul li a:active {
-  color: white;
   background-color: gray;
+}
+
+.info{
+	background-color: gray;
+	margin-top: 0px;
+	}
+
+.info_table{
+	color: white;
+	margin-top: 0px;
+	text-align: center;
+	padding: 20px;
+	}
+
+.loginform{
+	height:420px;
+	width:290px;
+	margin:80px 530px;
+	border: 10px #CCC solid;
+	background:white;
+	padding:10px;
+}
+
+
+.loginform input{
+	padding: 10px;
+	width: 280px;
+	margin: 5px;
+}
+
+
+.loginform button{
+	background-color: mediumseagreen;
+	color: white;
+	width: 290px;
+	padding: 14px 20px;
+	margin: auto;
+	border: none;
+	cursor: pointer;
+}
+
+.signupform{
+	height:490px;
+	width:290px;
+	margin:80px 530px;
+	border: 10px #CCC solid;
+	background:white;
+	padding:10px;
+}
+
+
+.signupform input{
+	padding: 10px;
+	width: 280px;
+	margin: 5px;
+  text-align: center;
+}
+
+
+.signupform button{
+	background-color: mediumseagreen;
+	color: white;
+	width: 290px;
+	padding: 14px 20px;
+	margin: auto;
+	border: none;
+	cursor: pointer;
+}
+
+.btn {
+	background-color: mediumseagreen;
+  font-weight: bold;
+	color: white;
+	width: 290px;
+	height: 45px;
+	padding: 14px 20px;
+	margin: auto;
+	border: none;
+	cursor: pointer;
 }

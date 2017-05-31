@@ -45,11 +45,16 @@
    $sql = 'create table cfProjects ( '.
          ' projectID int(9) not null auto_increment,'.
          ' projectTitle varchar(50) not null, '.
-         ' projectGoal int(7) not null,'.
-         ' donationProgress int(7) not null,'.
-         ' projectCategory varchar(30) not null,'.
+         ' beneficiary varchar(50) not null,'.
          ' beneficiaryLocation varchar(50) not null,'.
-         ' projectBeneficiary varchar(50) not null,'.
+         ' donationGoal int(7) not null,'.
+         ' donationProgress varchar(7) not null,'.
+         ' projectTags varchar(20) not null,'.
+         ' projectCategory enum("Health", "Poverty",'.
+         ' "Education", "Animals", "Environment", "Other") not null,'.
+         ' projectDesc text not null,'.
+         ' ownerID text not null,'.
+         ' projectImg text,'.
          ' primary key(projectID));';
 
    $retval = mysql_query($sql, $conn);
