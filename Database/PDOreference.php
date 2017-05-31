@@ -26,6 +26,6 @@
   {
       echo $row['projectID'] . " | " . $row['projectTitle'] . " | " . $row['beneficiary'].
       $row['beneficiaryLocation'] . ' | ' . $row['donationProgress'] .
-      ' out of ' . $row['donationGoal'] . $row['ownerID'] . '<br>';
+      ' out of ' . $row['donationGoal'] . " | " . $row['ownerID'] . '<br>';
   }
 ?>

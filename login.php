@@ -29,7 +29,7 @@ $count=mysql_num_rows($result);
 // table row is 1 row when $useremail and $userpassword is valid
 if($count==1){
 
-$_SESSION['useremail'] = $useremail; // initialize session
+$_SESSION['userID'] = $row['userID']; // initialize session
 header("location:myhome.php");
 }
 else {

@@ -1,5 +1,5 @@
 <?php
-session_start();
+include("session.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ session_start();
       <ul>
           <li><a href="logout.php">Logout</a></li>
           <li><a href="#">Profile</a></li>   
-          <li><a href="newproject.html">Start a Project</a></li>
+          <li><a href="newproject.php">Start a Project</a></li>
           <li><a href="myhome.php">Home</a></li>
       </ul>
   </div>
@@ -82,8 +82,9 @@ session_start();
 fillUserIDfornow();
 
 function fillUserIDfornow(){
-  document.getElementById("userID").value ="ASK1";
+  document.getElementById("userID").value = "<?php echo $row['firstname']." ".$row['lastname'] ?>";
 }
 
 </script>
 </html>
+<?php ob_end_flush(); ?>

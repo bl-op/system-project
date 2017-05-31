@@ -100,7 +100,7 @@
        <?php echo $result[0]["projectDesc"]?>
        </div>
     </body>
-    
+    <br></br>
     <footer class="info">
   	<table style="width:100%" class="info_table">
         	<tr>

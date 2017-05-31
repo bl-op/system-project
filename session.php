@@ -16,10 +16,10 @@
          
 
  // select logged in users detail
- $result=mysql_query("SELECT * FROM cfUsers WHERE email = '" . $_SESSION[ 'useremail' ] . "'" );
+ $result=mysql_query("SELECT * FROM cfUsers WHERE userID = '" . $_SESSION[ 'userID' ] . "'" );
  $row=mysql_fetch_array($result);
  // if session is not set, return to login page
- if( !isset($_SESSION[ 'useremail' ]) ) {
+ if( !isset($_SESSION[ 'userID' ]) ) {
      header("Location: login.html");
      exit;
      }
