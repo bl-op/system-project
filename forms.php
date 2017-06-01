@@ -39,9 +39,10 @@ if(!empty($_POST['new-project'])) {
   $retval = mysql_query($sql, $conn);
 
   if($retval){
-    echo "Entered successfully.<br>";
+    $id=mysql_insert_id();
+    header("location:project.php?id=".$id);
   } else {
-    echo "An error occured.<br>" . mysql_error();
+    header("location:error.php");
   } 
 }
 
