@@ -313,28 +313,6 @@ body{
 	margin: 0 auto;
 }
 
-/*user profile*/
-.profileimage {
-	width: 150px;
-	height: 150px;
-	margin: 35px auto;
-	/*insert image either by default or use forms to upload?*/
-	background-image: url('path/to/image');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	border: 5px solid #eee;
-	border-radius: 100%;
-}
-
-.clock {
-   background-image:url('');
-   background-size:cover;
-   background-position: center;
-   height: 250px; width: 250px;
-   border: 1px solid #bbb;
-}
-
 .h1 {
 	text-align: center;
 	text-justify: auto;
