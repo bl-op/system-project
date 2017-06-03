@@ -32,7 +32,7 @@
             <a href="logout.php">Logout</a>
             <a href="#">Profile</a>               
             <a href="newproject.php">Start a Project</a>
-            <a href="carifund.php">Home</a>
+            <a href="myhome.php">Home</a>
         </div>
         </header>
       
