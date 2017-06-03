@@ -23,23 +23,12 @@ include("session.php");
   </head>
 
   <body>
-  	
-	  	<?php
-	  	if(isset($_SESSION['userid']))
-	  	{
-	  		$usersData = getUsersData(getId($_SESSION['userid'])); 
-	  		?>
-
-	  		<!-- <div class="profilecontainer">
-				<h1>User Profile</h1> -->
-				
-
-	  		<?php echo $usersData['firstname']." ".$usersData['lastname']."'s Profile"; ?>
-
-	  		<!-- </div> -->
-	  		<?php
-	  	}
-	  	?>
+	  
+	  <div class="profilecontainer">
+		<h1>User Profile</h1>
+	  </div>
+		<p style="text-align: center">Name</p><br><br>
+	  	<?php echo $row['firstname']." ".$row['lastname']; ?>
 
   </body>
 
