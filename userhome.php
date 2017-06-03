@@ -29,12 +29,12 @@ require("userprofile.php");
 
   		<div class="profilecontainer">
 			<h1>User Profile</h1>
-			{First name} {Last Name's} Profile
+			
 
-  		<?php echo $userData['firstname']." ".$usersData['lastname']."'s Profile"; ?>
+  		<?php echo $usersData['firstname']." ".$usersData['lastname']."'s Profile"; ?>
 
   		</div>
-  			// insert div 
+  			
   	}
 
   </head>
