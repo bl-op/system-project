@@ -5,7 +5,6 @@ require("userprofile.php");
 
 <!DOCTYPE html>
 
-<html>
   <head>
   <title>User Profile</title>
   <meta charset="UTF-8">
@@ -62,4 +61,3 @@ require("userprofile.php");
      	</div>
 
 	</body>
-</html>
