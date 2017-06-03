@@ -13,13 +13,13 @@ include("session.php");
 	<body>
 		<header>
 		<div class="navibar">
-	        <ul>
-	            <li><a href="login.html">Login</a></li>
-	            <li><a href="about.html">About</a></li>
-	            <li><a href="newproject.html">Start a Project</a></li>
-	            <li><a href="carifund.html">Home</a></li>
-	        </ul>
-	    </div>
+	      	<ul>
+		          <li><a href="logout.php">Logout</a></li>
+		          <li><a href="userhome.php">Profile</a></li>   
+		          <li><a href="newproject.php">Start a Project</a></li>
+		          <li><a href="myhome.php">Home</a></li>
+	      	</ul>
+	  	</div>
 	    </header>
   
 		<div class="profilecontainer">
