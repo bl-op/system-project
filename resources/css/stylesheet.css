@@ -293,8 +293,17 @@ body{
   display: inline-block;
   width: 19%;
   text-align: center;
-  border: 0px solid #000;
   margin: auto;
+	text-decoration: none;
+}
+
+.thumbnail a{
+    text-decoration: none;
+}
+
+.preview{
+	height: 150px;
+	width: 150px;
 }
 
 .exploreCategory{

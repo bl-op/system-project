@@ -25,7 +25,8 @@
   while ($row = $stmt->fetch())
   {
       echo $row['projectID'] . " | " . $row['projectTitle'] . " | " . $row['beneficiary']. " | ".
-      $row['beneficiaryLocation'] . ' | ' . $row['donationProgress'] .
+      $row['beneficiaryLocation'] . ' | ' . $row['projectCategory']. " | " .$row['donationProgress'] .
       ' out of ' . $row['donationGoal'] . " | " . $row['ownerID'] . '<br>';
   }
+  
 ?>
