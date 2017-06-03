@@ -5,58 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="resources\css\stylesheet.css">
-        <style>
-        .categorymenu {
-            height: 0%;
-            width: 100%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0, 0.9);
-            overflow-y: hidden;
-            transition: 0.5s;
-        }
-        
-        .contents {
-            position: relative;
-            top: 25%;
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .categorymenu a {
-            padding: 8px;
-            text-decoration: none;
-            font-size: 36px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .categorymenu a:hover, .categorymenu a:focus {
-            color: #f1f1f1;
-        }
-
-        .categorymenu .closebtn {
-            position: absolute;
-            top: 20px;
-            right: 45px;
-            font-size: 60px;
-        }
-
-        @media screen and (max-height: 450px) {
-        .categorymenu {overflow-y: auto;}
-        .categorymenu a {font-size: 20px}
-        .categorymenu .closebtn {
-            font-size: 40px;
-            top: 15px;
-            right: 35px;
-            }
-        }
-    </style>
     </head>
     <body>
         <header>
@@ -69,6 +17,17 @@
             </ul>
         </div>
         </header>
+        <div>
+        <img src="crowdfunding.png" class="homeimage">
+        </div>
+
+        <div class="listproject">
+        <p>Latest Projects</p>
+        <div class="exploreCategory">
+        <button class="btn" style="font-size:25px; text-align: center;height: 50px;" onclick="openMenu()">Explore Categories</button>
+        </div>
+        </div>
+
         <div class="category">
             <div id="categorymenu" class="categorymenu">
             <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
@@ -82,7 +41,37 @@
             </div>
         </div>
 
-<button class="btn" style="font-size:25px" onclick="openMenu()">Explore Categories</button>
+        <div class="works" >
+             	<h1 style="text-align: center;">How does CariFund work?</h1>
+         	</div>
+
+         	<div class="steps">
+            	<div class="step1">
+                	<img src="find.png" class="stepimage">
+                	<p>
+                    	1. Find<br /><br />
+                    	Find a project that you would like to support.
+                	</p>
+            	</div>
+
+
+            	<div class="step2">
+                	<img src="pay.png" class="stepimage">
+                	<p>
+                    	2. Pay<br/><br />
+                    	Follow the easy steps that allows you to complete the payment.
+                	</p>  
+         	</div>
+
+
+         	<div class="step3">
+             	<img src="idea.png" class="stepimage">
+             	<p>
+                 	3. Idea<br/><br />
+                	If you have a vision for a new project just add a new one.   
+             	</p>
+        	</div>
+         	</div>
         
         <div class="info">
 
