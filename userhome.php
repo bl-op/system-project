@@ -3,24 +3,24 @@ include("session.php");
 ?>
 
 <!DOCTYPE html>
-
 <html>
-  <head>
-  <title>CariFund - New Project</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="resources\css\stylesheet.css">
-
-  <div class="navibar">
-      <ul>
-          <li><a href="logout.php">Logout</a></li>
-          <li><a href="userhome.php">Profile</a></li>   
-          <li><a href="newproject.php">Start a Project</a></li>
-          <li><a href="myhome.php">Home</a></li>
-      </ul>
-  </div>
-
-  </head>
+	<head>
+		<title>User Profile</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, intial-scale=1.0">
+		<link rel="stylesheet" href="stylesheet.css">
+	</head>
+	<body>
+		<header>
+		<div class="navibar">
+	        <ul>
+	            <li><a href="login.html">Login</a></li>
+	            <li><a href="about.html">About</a></li>
+	            <li><a href="newproject.html">Start a Project</a></li>
+	            <li><a href="carifund.html">Home</a></li>
+	        </ul>
+	    </div>
+	    </header>
 
   <body>
 	  
