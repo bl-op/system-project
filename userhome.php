@@ -21,6 +21,7 @@ include("session.php");
 	        </ul>
 	    </div>
 	    </header>
+	</body>
 
   <body>
 	  
