@@ -8,7 +8,7 @@ include("session.php");
 		<title>User Profile</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, intial-scale=1.0">
-		<link rel="stylesheet" href="resources\css\stylesheet.css">
+		<link rel="stylesheet" href="stylesheet.css">
 	</head>
 	<body>
 		<header>
@@ -21,19 +21,14 @@ include("session.php");
 	        </ul>
 	    </div>
 	    </header>
-	</body>
+  
+	<div class="profilecontainer">
+		<h1 style="text-align: center">User Profile</h1>
 
-  <body>
-	  
-	  	<div class="profilecontainer">
-			<h1 style="text-align: center">User Profile</h1>
+		<p style="text-align: center">About Me<br><br>
+		Hello <?php echo $row['firstname']." ".$row['lastname']; ?>! Currently displaying your user profile details.</p>
 
-			<p style="text-align: center">About Me<br><br>
-			Hello <?php echo $row['firstname']." ".$row['lastname']; ?>! Currently displaying your user profile details.</p>
-
-		</div>
-
-  </body>
+	</div>
 
   		<div class="info">
 
@@ -54,4 +49,5 @@ include("session.php");
                  	</tr>
             	</table>
      	</div>
+    </body>
 </html>
