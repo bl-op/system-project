@@ -191,3 +191,64 @@ body{
 	border: none;
 	cursor: pointer;
 }
+
+.homeimage {
+  margin-left: 100px;
+  width: relative;
+  height: relative;
+}
+
+h2{
+  position:absolute;
+  top: 530px;
+  left: 550px;
+  width: 100%;
+}
+
+h2 span{
+  color:white;
+  font: bold 100px/100px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(0,0,0);
+  background: rbga(0,0,0,0.7);
+  padding:2px;
+}
+
+h1{
+  position:absolute;
+  top: 930px;
+  left: 570px;
+  width: 100%;
+}
+
+.steps{
+	width: 800px;
+	margin: 0 auto;
+}
+
+.step1{  
+	margin-bottom: 80px;
+	font-size: 25px;
+}
+
+.step2{
+	margin-bottom: 80px;
+	font-size: 25px;
+}
+
+.step3{ 
+	margin-bottom: 80px;
+	font-size: 25px;
+}
+
+.stepimage{
+	float: left;
+	height: 100px;
+	margin-right: 50px;
+}
+
+.steps{
+	padding: 15px;
+	margin-top: 80px;
+	text-align: center;
+}
