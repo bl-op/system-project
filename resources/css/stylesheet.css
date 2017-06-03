@@ -85,17 +85,7 @@ body{
   margin: 0;
 }
 
-.navibar ul {
-  margin: 0;
-  padding: 0;
-}
-
-.navibar ul li {
-  list-style: none;
-  margin: 0;
-}
-
-.navibar ul li a {
+.navibar a {
     font-size: 23px;
     font-family: Trebuchet MS;
     text-decoration: none;
@@ -105,12 +95,19 @@ body{
     color: white;
 }
 
-.navibar ul li a:hover {
+.navibar a:hover {
   background-color: gray;
 }
 
-.navibar ul li a:active {
+.navibar a:active {
   background-color: gray;
+}
+
+.navbartext{
+  font-family: Trebuchet MS;
+  float: left;
+  color: white;
+	margin: 0;
 }
 
 .info{
@@ -195,6 +192,8 @@ body{
 .homeimage {
   width: 100%;
   height: auto;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .steps{
@@ -225,10 +224,8 @@ body{
 
 .listproject {
   background-color: mintcream;
-  margin: 0 auto;
+  margin: 0;
 	padding: 15px;
-	margin: 10px 0px;
-	margin-bottom: 0px;
   }
 
 .categorymenu {
@@ -244,54 +241,71 @@ body{
   transition: 0.5s;
   }
   
-  .contents {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    }
+.contents {
+	position: relative;
+	top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  }
     
-    .categorymenu a {
-      padding: 8px;
-      text-decoration: none;
-      font-size: 36px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-      }
-    
-    .categorymenu a:hover, .categorymenu a:focus {
-      color: #f1f1f1;
-      }
-      
-    .categorymenu .closebtn {
-      position: absolute;
-      top: 20px;
-      right: 45px;
-      font-size: 60px;
-      }
-    
-    @media screen and (max-height: 450px) {
-      .categorymenu {overflow-y: auto;}
-      .categorymenu a {font-size: 20px}
-      .categorymenu .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-        }
-      }
+.categorymenu a {
+	padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  }
 
-    .exploreCategory{
-      background-color: mintcream;
-      color: white;
-      margin: 0 auto;
-      padding: 15px;
-      margin: 10px 0px;
-      margin-bottom: 0px;
-      text-align: center;
-      }
+.categorymenu a:hover, .categorymenu a:focus {
+	color: #f1f1f1;
+	}
 
+.categorymenu .closebtn {
+	position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+	}
+    
+@media screen and (max-height: 450px) {
+	.categorymenu {overflow-y: auto;}
+  .categorymenu a {font-size: 20px}
+  .categorymenu .closebtn {
+		font-size: 40px;
+    top: 15px;
+    right: 35px;
+		}
+	}
+			
+#latest{
+	width: 100%;
+	height: auto;
+  background: mintcream;
+  display: inline-block;
+  float: right;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.thumbnail{
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+  border: 0px solid #000;
+  margin: auto;
+}
+
+.exploreCategory{
+	background-color: mintcream;
+	color: white;
+	margin: 0 auto;
+	padding: 15px;
+	margin: 10px 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	}
 
 .profilecontainer {
 	width: 1000px;

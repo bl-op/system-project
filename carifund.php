@@ -9,23 +9,38 @@
     <body>
         <header>
         <div class="navibar">
-            <ul>
-                <li><a href="signup.html">Sign Up</a></li>                
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="carifund.php">Home</a></li>
-            </ul>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="about.html">About</a>
+            <a href="carifund.php">Home</a>
         </div>
         </header>
-        <div>
-        <img src="crowdfunding.png" class="homeimage">
-        </div>
-
+        
+        <div><img src="crowdfunding.png" class="homeimage"></div>
         <div class="listproject">
         <p>Latest Projects</p>
+        <div id="latest">
+        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
+        <p class="caption">project title here</p></div>
+    
+        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
+        <p class="caption">project title here</p></div>
+    
+        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
+        <p class="caption">project title here</p></div>
+    
+        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
+        <p class="caption">project title here</p></div>
+    
+        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
+        <p class="caption">project title here</p></div>
+
+        </div>
+        </div>
+
         <div class="exploreCategory">
         <button class="btn" style="font-size:25px; text-align: center;height: 50px;" onclick="openMenu()">Explore Categories</button>
-        </div>
+        <br></br>
         </div>
 
         <div class="category">

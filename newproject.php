@@ -10,19 +10,17 @@ include("session.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="resources\css\stylesheet.css">
-
-  <div class="navibar">
-      <ul>
-          <li><a href="logout.php">Logout</a></li>
-          <li><a href="#">Profile</a></li>   
-          <li><a href="newproject.php">Start a Project</a></li>
-          <li><a href="myhome.php">Home</a></li>
-      </ul>
-  </div>
-
   </head>
 
   <body>
+  <header>
+        <div class="navibar">
+        <a href="logout.php">Logout</a> 
+        <a href="#">Profile</a>             
+        <a href="newproject.php">Start a Project</a>
+        <a href="myhome.php">Home</a>
+        </div>
+  </header>
     <br><br>
     <div class="newproject" style="height: 650px">
   	<form action="forms.php" method="post">
