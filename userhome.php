@@ -22,13 +22,13 @@ include("session.php");
 	    </div>
 	    </header>
   
-	<div class="profilecontainer">
-		<h1 style="text-align: center">User Profile</h1>
+		<div class="profilecontainer">
+			<h1 style="text-align: center">User Profile</h1>
 
-		<p style="text-align: center">About Me<br><br>
-		Hello <?php echo $row['firstname']." ".$row['lastname']; ?>! Currently displaying your user profile details.</p>
+			<p style="text-align: center">About Me<br><br>
+			<?php echo $row['firstname']." ".$row['lastname']; ?></p>
 
-	</div>
+		</div>
 
   		<div class="info">
 
