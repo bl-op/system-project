@@ -28,7 +28,7 @@ require("userprofile.php");
 	  	<?php
 	  	if(isset($_SESSION['username']))
 	  	{
-	  		$usersData = getUsersData(getId($_SESSION['username']));
+	  		$usersData = getUsersData(getId($_SESSION['username'])); 
 	  		?>
 
 	  		<!-- <div class="profilecontainer">
@@ -38,8 +38,9 @@ require("userprofile.php");
 	  		<?php echo $usersData['firstname']." ".$usersData['lastname']."'s Profile"; ?>
 
 	  		<!-- </div> -->
-	  			
+	  		<?php
 	  	}
+	  	?>
 
   </body>
 
