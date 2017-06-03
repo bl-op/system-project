@@ -1,6 +1,5 @@
 <?php
-session_start();
-require("userprofile.php");
+include("session.php");
 ?>
 
 <!DOCTYPE html>
@@ -26,9 +25,9 @@ require("userprofile.php");
   <body>
   	
 	  	<?php
-	  	if(isset($_SESSION['username']))
+	  	if(isset($_SESSION['userid']))
 	  	{
-	  		$usersData = getUsersData(getId($_SESSION['username'])); 
+	  		$usersData = getUsersData(getId($_SESSION['userid'])); 
 	  		?>
 
 	  		<!-- <div class="profilecontainer">
