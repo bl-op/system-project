@@ -14,7 +14,7 @@ include("session.php");
 		<header>
 			<div class="navibar">
 				<a href="logout.php">Logout</a> 
-				<a href="userhome.php?id=<?php echo $_SESSION['id']);?>">Profile</a>
+				<a href="userhome.php?id=<?php echo $_SESSION['id'];?>">Profile</a>
 				<a href="newproject.php">Start a Project</a>
 				<a href="myhome.php">Home</a>
 			</div>
