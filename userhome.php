@@ -14,7 +14,7 @@ include("session.php");
 		<header>
 			<div class="navibar">
 				<a href="logout.php">Logout</a> 
-				<a href="#">Profile</a>             
+				<a href="userhome.php?id=" . $_SESSION['id']);>Profile</a>
 				<a href="newproject.php">Start a Project</a>
 				<a href="myhome.php">Home</a>
 			</div>
@@ -26,6 +26,8 @@ include("session.php");
 			<p style="text-align: center">About Me<br><br>
 			<?php echo $row['firstname']." ".$row['lastname']; ?></p>
 
+			<!-- to insert project history? -->
+			
 		</div>
 
   		<div class="info">
