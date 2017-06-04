@@ -13,7 +13,7 @@ include("session.php");
         <header>
         <div class="navibar">
             <a href="logout.php">Logout</a> 
-            <a href="#">Profile</a>             
+            <a href="userhome.php">Profile</a>             
             <a href="newproject.php">Start a Project</a>
             <a href="myhome.php">Home</a>
         </div>
@@ -22,26 +22,26 @@ include("session.php");
         <div><img src="crowdfunding.png" class="homeimage"></div>
 
         <?php
-        include("latestproject.php");
+        include("getproject.php");
         ?>
 
         <div class="listproject">
         <p>Latest Projects</p>
 
         <div id="latest">
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic1; ?>" class="preview">
         <p><a href="project.php?id=<?php echo $previewID1; ?>"><?php echo $previewTitle1; ?></a></p></div>
     
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic2; ?>" class="preview">
         <p><a href="project.php?id=<?php echo $previewID2; ?>"><?php echo $previewTitle2; ?></a></p></div>
     
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic3; ?>" class="preview">
         <p><a href="project.php?id=<?php echo $previewID3; ?>"><?php echo $previewTitle3; ?></a></p></div>
     
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic4; ?>" class="preview">
         <p><a href="project.php?id=<?php echo $previewID4; ?>"><?php echo $previewTitle4; ?></a></p></div>
     
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic5; ?>" class="preview">
         <p><a href="project.php?id=<?php echo $previewID5; ?>"><?php echo $previewTitle5; ?></a></p></div>
 
         </div>

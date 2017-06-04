@@ -112,7 +112,7 @@ body{
 
 .info{
 	background-color: gray;
-	margin-top: 0px;
+	margin: auto;
 	}
 
 .info_table{
@@ -389,4 +389,31 @@ body{
 	width: 950px;
 	margin: 15px auto 50px;
 	padding: 10px 50px;
+}
+
+.categoryimg{
+	float: left;
+	width: 300;
+	height: 210px;
+	margin-left: 50px;
+	margin-right: 30px;
+
+}
+
+.categoryinfo{
+	font-size: 15px;
+	width: 85%;
+	padding: auto;
+	font-family: Trebuchet MS;
+}
+
+.categoryinfo a{
+	text-decoration: none;
+}
+
+.errormsg{
+	font-size: 30px;
+	text-align: center;
+	margin-top: 110px;
+	margin-bottom: 119px;
 }

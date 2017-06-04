@@ -1,5 +1,5 @@
 <?php
-include("latestproject.php");
+include("getproject.php");
  ?>
 
 <!DOCTYPE html>
@@ -25,19 +25,19 @@ include("latestproject.php");
         <p>Latest Projects</p>
         <div id="latest">
         
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic1; ?>" class="preview">
         <p><a href="viewproject.php?id=<?php echo $previewID1; ?>"><?php echo $previewTitle1; ?></a></p></div>
     
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic2; ?>" class="preview">
         <p><a href="viewproject.php?id=<?php echo $previewID2; ?>"><?php echo $previewTitle2; ?></a></p></div>
     
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic3; ?>" class="preview">
         <p><a href="viewproject.php?id=<?php echo $previewID3; ?>"><?php echo $previewTitle3; ?></a></p></div>
     
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic4; ?>" class="preview">
         <p><a href="viewproject.php?id=<?php echo $previewID4; ?>"><?php echo $previewTitle4; ?></a></p></div>
     
-        <div class="thumbnail"><img src="carifund.png" class="preview">
+        <div class="thumbnail"><img src="<?php echo $previewpic5; ?>" class="preview">
         <p><a href="viewproject.php?id=<?php echo $previewID5; ?>"><?php echo $previewTitle5; ?></a></p></div>
 
         </div>
@@ -52,7 +52,7 @@ include("latestproject.php");
             <div id="categorymenu" class="categorymenu">
             <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
             <div class="contents">
-            <a href="#">Poverty</a>
+            <a href="poverty.php">Poverty</a>
             <a href="#">Education</a>
             <a href="#">Health</a>
             <a href="#">Animals</a>

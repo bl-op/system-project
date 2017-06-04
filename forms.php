@@ -23,6 +23,7 @@ if(!empty($_POST['new-project'])) {
   $donationGoal = $_POST['donationGoal'];
   $category = $_POST['category'];
   $ownerID = $_POST['ownerID'];
+  $owner =  $_POST[ 'owner' ];
   
   if(empty($_POST['projectImg'])){
     $projectImg = "NONE";
@@ -32,9 +33,9 @@ if(!empty($_POST['new-project'])) {
 
   $sql = "insert into cfProjects (projectTitle, beneficiary,".
         " beneficiaryLocation, donationGoal, donationProgress,".
-        " projectTags, projectCategory, projectDesc, ownerID, projectImg)".
+        " projectTags, projectCategory, projectDesc, ownerID, owner, projectImg)".
         " values ('{$projectTitle}','{$beneficiary}','{$beneficiaryLocation}',".
-        " {$donationGoal},0,'{$projectTags}','{$category}','{$projectDesc}', '{$ownerID}', '{$projectImg}');";
+        " {$donationGoal},0,'{$projectTags}','{$category}','{$projectDesc}', '{$ownerID}', '{$owner}', '{$projectImg}');";
 
   $retval = mysql_query($sql, $conn);
 
