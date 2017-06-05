@@ -43,6 +43,7 @@
       <p style="text-align: center">About Me<br><br>
       First Name: <?php echo $result[0]["firstname"]?>
       Last Name: <?php echo $result[0]["lastname"]?>
+      Email: <?php echo $result[0]["email"]?>
       </p>
 
 
