@@ -14,7 +14,7 @@ include("session.php");
         <div class="navibar">
             <p class="navbartext">Logged in as <?php echo $row['firstname']." ".$row['lastname']; ?>. Welcome back!</p>
             <a href="logout.php">Logout</a> 
-            <a href="profile.php?id=<?php echo $id; ?>">Profile</a>             
+            <a href="profile.php?id=<?php echo $ID; ?>">Profile</a>             
             <a href="newproject.php">Start a Project</a>
             <a href="myhome.php">Home</a>
         </div>
