@@ -30,7 +30,7 @@
             <a href="signup.html">Sign Up</a>                
             <a href="login.html">Login</a>
             <a href="#">About</a>
-            <a href="carifund.html">Home</a>
+            <a href="carifund.php">Home</a>
         </ul>
     </div>
     </header>
