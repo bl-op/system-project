@@ -41,8 +41,8 @@
       <h1 style="text-align: center">User Profile</h1>
 
       <p style="text-align: center">About Me<br><br>
-      First Name: <?php echo $result[0]["firstname"]?>
-      Last Name: <?php echo $result[0]["lastname"]?>
+      First Name: <?php echo $result[0]["firstname"]?><br>
+      Last Name: <?php echo $result[0]["lastname"]?><br>
       Email: <?php echo $result[0]["email"]?>
       </p>
 
