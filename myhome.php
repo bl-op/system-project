@@ -12,6 +12,7 @@ include("session.php");
     <body>
         <header>
         <div class="navibar">
+            <p class="navbartext">Logged in as <?php echo $row['firstname']." ".$row['lastname']; ?>. Welcome back!</p>
             <a href="logout.php">Logout</a> 
             <a href="userhome.php">Profile</a>             
             <a href="newproject.php">Start a Project</a>
@@ -56,12 +57,12 @@ include("session.php");
             <div id="categorymenu" class="categorymenu">
             <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
             <div class="contents">
-            <a href="#">Poverty</a>
-            <a href="#">Education</a>
-            <a href="#">Health</a>
-            <a href="#">Animals</a>
-            <a href="#">Environment</a>
-            <a href="#">Others</a>
+            <a href="userpoverty.php">Poverty</a>
+            <a href="usereducation.php">Education</a>
+            <a href="userhealth.php">Health</a>
+            <a href="useranimals.php">Animals</a>
+            <a href="userenvironment.php">Environment</a>
+            <a href="userother.php">Others</a>
             </div>
         </div>
 

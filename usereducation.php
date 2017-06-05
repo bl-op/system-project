@@ -13,18 +13,18 @@ include ("getproject.php");
     <body>
         <header>
         <div class="navibar">
-            <a href="signup.html">Sign Up</a>
-            <a href="login.html">Login</a>
-            <a href="about.html">About</a>
-            <a href="carifund.php">Home</a>
+            <a href="logout.php">Logout</a> 
+			<a href="userhome.php">Profile</a>
+			<a href="newproject.php">Start a Project</a>
+            <a href="myhome.php">Home</a>
         </div>
         </header>
 
         <div class="poverty">
-        <h1 style="text-align: center;">Category: Poverty</h1>
+        <h1 style="text-align: center;">Category: Education</h1>
         <?php
-        if (mysql_num_rows($poverty) > 0){ //check if projects available
-        while($row = mysql_fetch_assoc($poverty)){ ?>
+        if (mysql_num_rows($education) > 0){ //check if projects available
+        while($row = mysql_fetch_assoc($education)){ ?>
         <div class="categoryinfo">
             <img src="<?php echo $row['projectImg']; ?>" class="categoryimg">
             <h2><a href="viewproject.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']; ?></a><h2>
@@ -32,7 +32,7 @@ include ("getproject.php");
             <p style="font-size: 15px;">Description: <br></br><?php echo $row['projectDesc']; ?></p>
             <br></br>
             <br></br>
-        </div>  
+         </div>   
             <?php } ?>
         <?php } else{ ?>
         <br></br>
@@ -49,9 +49,9 @@ include ("getproject.php");
           	<table style="width:100%" class="info_table">
                 	<tr>
                     	<th>Connect with Us</th>
-                    	<th><a href="about.html" style="color:white; text-decoration:none;">About</th>
-                    	<th><a href="faq.html" style="color:white; text-decoration:none;">FAQ</a></th>
-                    	<th><a href="discover.html" style="color:white; text-decoration:none;">Discover</a></th>
+                    	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</a></th>
+                    	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+                    	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
                    	 
                 	</tr>
                  	<tr>
@@ -68,7 +68,7 @@ include ("getproject.php");
 
 <script>
 function returnhome(){
-    window.location.href = "carifund.php";
+    window.location.href = "myhome.php";
             
 }
 </script>

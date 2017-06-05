@@ -59,9 +59,9 @@ include("session.php");
           	<table style="width:100%" class="info_table">
                 	<tr>
                     	<th>Connect with Us</th>
-                    	<th><a href="about.html" style="color:white; text-decoration:none;">About</th>
-                    	<th><a href="faq.html" style="color:white; text-decoration:none;">FAQ</a></th>
-                    	<th><a href="discover.html" style="color:white; text-decoration:none;">Discover</a></th>
+                    	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
+                    	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+                    	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
                    	 
                 	</tr>
                  	<tr>

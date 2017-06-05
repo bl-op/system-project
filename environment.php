@@ -21,18 +21,19 @@ include ("getproject.php");
         </header>
 
         <div class="poverty">
-        <h1 style="text-align: center;">Category: Poverty</h1>
+        <h1 style="text-align: center;">Category: Environment</h1>
         <?php
-        if (mysql_num_rows($poverty) > 0){ //check if projects available
-        while($row = mysql_fetch_assoc($poverty)){ ?>
+        if (mysql_num_rows($environment) > 0){ //check if projects available
+        while($row = mysql_fetch_assoc($environment)){ ?>
         <div class="categoryinfo">
             <img src="<?php echo $row['projectImg']; ?>" class="categoryimg">
             <h2><a href="viewproject.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']; ?></a><h2>
             <p style="font-size: 17px;"><?php echo $row['beneficiary']; ?><p>
             <p style="font-size: 15px;">Description: <br></br><?php echo $row['projectDesc']; ?></p>
+            <P><?php echo mysql_error() ?></p>
             <br></br>
             <br></br>
-        </div>  
+       </div>     
             <?php } ?>
         <?php } else{ ?>
         <br></br>

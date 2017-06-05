@@ -53,11 +53,11 @@ include("getproject.php");
             <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
             <div class="contents">
             <a href="poverty.php">Poverty</a>
-            <a href="#">Education</a>
-            <a href="#">Health</a>
-            <a href="#">Animals</a>
-            <a href="#">Environment</a>
-            <a href="#">Others</a>
+            <a href="education.php">Education</a>
+            <a href="health.php">Health</a>
+            <a href="animals.php">Animals</a>
+            <a href="environment.php">Environment</a>
+            <a href="other.php">Others</a>
             </div>
         </div>
 
@@ -99,9 +99,9 @@ include("getproject.php");
           	<table style="width:100%" class="info_table">
                 	<tr>
                     	<th>Connect with Us</th>
-                    	<th><a href="#" style="color:white; text-decoration:none;">About</th>
-                    	<th><a href="#" style="color:white; text-decoration:none;">FAQ</a></th>
-                    	<th><a href="#" style="color:white; text-decoration:none;">Discover</a></th>
+                    	<th><a href="about.html" style="color:white; text-decoration:none;">About</th>
+                    	<th><a href="faq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+                    	<th><a href="discover.html" style="color:white; text-decoration:none;">Discover</a></th>
                    	 
                 	</tr>
                  	<tr>

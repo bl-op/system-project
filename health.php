@@ -21,10 +21,10 @@ include ("getproject.php");
         </header>
 
         <div class="poverty">
-        <h1 style="text-align: center;">Category: Poverty</h1>
+        <h1 style="text-align: center;">Category: Health</h1>
         <?php
-        if (mysql_num_rows($poverty) > 0){ //check if projects available
-        while($row = mysql_fetch_assoc($poverty)){ ?>
+        if (mysql_num_rows($health) > 0){ //check if projects available
+        while($row = mysql_fetch_assoc($health)){ ?>
         <div class="categoryinfo">
             <img src="<?php echo $row['projectImg']; ?>" class="categoryimg">
             <h2><a href="viewproject.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']; ?></a><h2>
@@ -32,7 +32,7 @@ include ("getproject.php");
             <p style="font-size: 15px;">Description: <br></br><?php echo $row['projectDesc']; ?></p>
             <br></br>
             <br></br>
-        </div>  
+        </div>    
             <?php } ?>
         <?php } else{ ?>
         <br></br>

@@ -52,7 +52,23 @@ if($conn ) {
  #========= Get latest project operation ends 
 
 #get poverty
-$result =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Poverty' ");
+$poverty =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Poverty' ");
+
+#get education
+$education =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Education' ");
+
+#get health
+$health =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Health' ");
+
+#get animals
+$animals =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Animals' ");
+
+#get environment
+$environment =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Environment' ");
+
+#get other
+$other =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Other' ");
+
 
 
  ?>
