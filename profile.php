@@ -29,7 +29,7 @@
         <ul>
             <li><a href="signup.html">Sign Up</a></li>                
             <li><a href="login.html">Login</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="carifund.html">Home</a></li>
         </ul>
     </div>
@@ -41,8 +41,8 @@
       <h1 style="text-align: center">User Profile</h1>
 
       <p style="text-align: center">About Me<br><br>
-      <p>First Name: <?php echo $result[0]["firstname"]?></p>
-      <p>Last Name: <?php echo $result[0]["lastname"]?></p>
+      First Name: <?php echo $result[0]["firstname"]?>
+      Last Name: <?php echo $result[0]["lastname"]?>
       </p>
 
 
