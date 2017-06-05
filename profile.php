@@ -27,10 +27,10 @@
     <header>
     <div class="navibar">
         <ul>
-            <li><a href="signup.html">Sign Up</a></li>                
-            <li><a href="login.html">Login</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="carifund.html">Home</a></li>
+            <a href="signup.html">Sign Up</a>                
+            <a href="login.html">Login</a>
+            <a href="#">About</a>
+            <a href="carifund.html">Home</a>
         </ul>
     </div>
     </header>
