@@ -19,7 +19,7 @@
 
 <html>
     <head>
-        <title><?php echo $result[0]["firstName"]?>'s User Profile</title>
+        <title><?php echo $result[0]["firstname"]?>'s User Profile</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="resources\css\stylesheet.css">
@@ -41,7 +41,9 @@
       <h1 style="text-align: center">User Profile</h1>
 
       <p style="text-align: center">About Me<br><br>
-      <?php echo $row['firstname']." ".$row['lastname']; ?></p>
+      <p>First Name: <?php echo $result[0]["firstname"]?></p>
+      <p>Last Name: <?php echo $result[0]["lastname"]?></p>
+      </p>
 
 
       <!-- to insert project history? -->
