@@ -1,6 +1,5 @@
 <?php
 include("session.php");
-include("getprofile.php");
 ?>
 <!DOCTYPE html>
 <html>
