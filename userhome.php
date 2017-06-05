@@ -8,7 +8,7 @@ include("session.php");
 		<title>My User Profile</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, intial-scale=1.0">
-		<link rel="stylesheet" href="resources\css\stylesheet2.css">
+		<link rel="stylesheet" href="resources\css\stylesheet.css">
 	</head>
 	<body>
 		<header>
