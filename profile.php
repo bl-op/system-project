@@ -29,7 +29,7 @@
         <ul>
             <li><a href="signup.html">Sign Up</a></li>                
             <li><a href="login.html">Login</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="">About</a></li>
             <li><a href="carifund.html">Home</a></li>
         </ul>
     </div>
