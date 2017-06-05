@@ -1,15 +1,70 @@
 <?php
-ob_start();
-session_start();
-$id = (isset($_GET['id'])) ? $_GET['id'] : $_SESSION['id'];
-$query = "SELECT * FROM cfusers WHERE userID = $id";
-// if session is not set this will redirect to userhome page
-if( !isset($_SESSION['id']) ) {
-	header("Location:userhome.php?id=" . $_SESSION['id']);
- 	exit;
-}
-// select logged in users detail
-$result = mysql_query("SELECT * FROM cfusers WHERE userID=".$_SESSION['id']);
-$row = mysql_fetch_array($result);
-$id = $_GET['userID'];
+  $host = 'localhost';
+  $db   = 'carifund';
+  $user = 'root';
+  $pass = '';
+  $charset = 'utf8';
+  $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+  $opt = [
+      PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+      PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+      PDO::ATTR_EMULATE_PREPARES   => false,
+  ];
+  $pdo = new PDO($dsn, $user, $pass, $opt);
+  
+  $sth = $pdo->query('SELECT * FROM cfUsers WHERE userID='.$_GET['id']);
+  
+  $result = $sth->fetchAll();
 ?>
+
+<html>
+    <head>
+        <title><?php echo $result[0]["firstName"]?></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resources\css\stylesheet.css">
+    </head>
+    <header>
+    <div class="navibar">
+        <ul>
+            <li><a href="signup.html">Sign Up</a></li>                
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="carifund.html">Home</a></li>
+        </ul>
+    </div>
+    </header>
+    <body>
+
+    <!-- insert details here -->
+    <div class="profilecontainer">
+      <h1 style="text-align: center">User Profile</h1>
+
+      <p style="text-align: center">About Me<br><br>
+      <?php echo $row['firstname']." ".$row['lastname']; ?></p>
+
+
+      <!-- to insert project history? -->
+    </div>
+
+    </body>
+    <br></br>
+    <footer class="info">
+    <table style="width:100%" class="info_table">
+          <tr>
+              <th>Connect with Us</th>
+              <th><a href="#" style="color:white; text-decoration:none;">About</th>
+              <th><a href="#" style="color:white; text-decoration:none;">FAQ</a></th>
+              <th><a href="#" style="color:white; text-decoration:none;">Discover</a></th>
+             
+          </tr>
+          <tr>
+              <td><a href="emailus.html" style="color:white; text-decoration:none;">Email</a></td>
+          </tr>
+          <tr>
+              <td><a href="https://www.facebook.com/" style="color:white; text-decoration:none;">Facebook</a></td>
+          </tr>
+      </table>
+    </footer>
+
+</html>
