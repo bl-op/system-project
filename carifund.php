@@ -1,3 +1,7 @@
+<?php
+include("getproject.php");
+ ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,20 +24,21 @@
         <div class="listproject">
         <p>Latest Projects</p>
         <div id="latest">
-        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
-        <p class="caption">project title here</p></div>
+        
+        <div class="thumbnail"><img src="<?php echo $previewpic1; ?>" class="preview">
+        <p><a href="viewproject.php?id=<?php echo $previewID1; ?>"><?php echo $previewTitle1; ?></a></p></div>
     
-        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
-        <p class="caption">project title here</p></div>
+        <div class="thumbnail"><img src="<?php echo $previewpic2; ?>" class="preview">
+        <p><a href="viewproject.php?id=<?php echo $previewID2; ?>"><?php echo $previewTitle2; ?></a></p></div>
     
-        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
-        <p class="caption">project title here</p></div>
+        <div class="thumbnail"><img src="<?php echo $previewpic3; ?>" class="preview">
+        <p><a href="viewproject.php?id=<?php echo $previewID3; ?>"><?php echo $previewTitle3; ?></a></p></div>
     
-        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
-        <p class="caption">project title here</p></div>
+        <div class="thumbnail"><img src="<?php echo $previewpic4; ?>" class="preview">
+        <p><a href="viewproject.php?id=<?php echo $previewID4; ?>"><?php echo $previewTitle4; ?></a></p></div>
     
-        <div class="thumbnail"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150">
-        <p class="caption">project title here</p></div>
+        <div class="thumbnail"><img src="<?php echo $previewpic5; ?>" class="preview">
+        <p><a href="viewproject.php?id=<?php echo $previewID5; ?>"><?php echo $previewTitle5; ?></a></p></div>
 
         </div>
         </div>
@@ -47,12 +52,12 @@
             <div id="categorymenu" class="categorymenu">
             <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
             <div class="contents">
-            <a href="#">Poverty</a>
-            <a href="#">Education</a>
-            <a href="#">Health</a>
-            <a href="#">Animals</a>
-            <a href="#">Environment</a>
-            <a href="#">Others</a>
+            <a href="poverty.php">Poverty</a>
+            <a href="education.php">Education</a>
+            <a href="health.php">Health</a>
+            <a href="animals.php">Animals</a>
+            <a href="environment.php">Environment</a>
+            <a href="other.php">Others</a>
             </div>
         </div>
 
@@ -94,9 +99,9 @@
           	<table style="width:100%" class="info_table">
                 	<tr>
                     	<th>Connect with Us</th>
-                    	<th><a href="#" style="color:white; text-decoration:none;">About</th>
-                    	<th><a href="#" style="color:white; text-decoration:none;">FAQ</a></th>
-                    	<th><a href="#" style="color:white; text-decoration:none;">Discover</a></th>
+                    	<th><a href="about.html" style="color:white; text-decoration:none;">About</th>
+                    	<th><a href="faq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+                    	<th><a href="discover.html" style="color:white; text-decoration:none;">Discover</a></th>
                    	 
                 	</tr>
                  	<tr>

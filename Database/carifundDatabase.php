@@ -54,6 +54,7 @@
          ' "Education", "Animals", "Environment", "Other") not null,'.
          ' projectDesc text not null,'.
          ' ownerID text not null,'.
+         ' owner int(9) not null,'.
          ' projectImg text,'.
          ' primary key(projectID));';
 

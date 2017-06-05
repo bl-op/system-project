@@ -16,7 +16,7 @@ include("session.php");
   <header>
         <div class="navibar">
         <a href="logout.php">Logout</a> 
-        <a href="#">Profile</a>             
+        <a href="userhome.php">Profile</a>             
         <a href="newproject.php">Start a Project</a>
         <a href="myhome.php">Home</a>
         </div>
@@ -47,8 +47,9 @@ include("session.php");
        
        <div style="display:none">
          <input type="text" name="ownerID" id="userID">
+         <input type="hidden" name="owner" id="user">
        </div>
-       
+
   	  <P><INPUT TYPE=SUBMIT VALUE="Submit" name="new-project" style="width: 75px">
   	</FORM>
     </div>
@@ -58,9 +59,9 @@ include("session.php");
           	<table style="width:100%" class="info_table">
                 	<tr>
                     	<th>Connect with Us</th>
-                    	<th><a href="about.html" style="color:white; text-decoration:none;">About</th>
-                    	<th><a href="faq.html" style="color:white; text-decoration:none;">FAQ</a></th>
-                    	<th><a href="discover.html" style="color:white; text-decoration:none;">Discover</a></th>
+                    	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
+                    	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+                    	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
                    	 
                 	</tr>
                  	<tr>
@@ -82,6 +83,13 @@ fillUserIDfornow();
 function fillUserIDfornow(){
   document.getElementById("userID").value = "<?php echo $row['firstname']." ".$row['lastname'] ?>";
 }
+
+getUserID()
+
+function getUserID(){
+  document.getElementById("user").value = "<?php echo $row['userID'] ?>";
+}
+
 
 </script>
 </html>

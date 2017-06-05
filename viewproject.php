@@ -29,10 +29,10 @@
     <body>
     <header>
         <div class="navibar">
-            <a href="logout.php">Logout</a>
-            <a href="userhome.php">Profile</a>               
-            <a href="newproject.php">Start a Project</a>
-            <a href="myhome.php">Home</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="about.html">About</a>
+            <a href="carifund.php">Home</a>
         </div>
         </header>
       
@@ -89,7 +89,7 @@
       </div>
       
       <!--Owner of the Project Here-->
-      <h3 style="margin-bottom:3px"><a href="viewproject.php?id=<?php echo $viewowner; ?>"><?php echo $result[0]['ownerID'] ?></a></h3>
+      <h3 style="margin-bottom:3px"><?php echo $result[0]['ownerID'] ?></h3>
       <p style="margin-top:0px">Organizer</p>
       
       <div style="background-color:mediumseagreen; width:100%; height:10px; margin: 10px 0px"></div>
@@ -103,9 +103,9 @@
   	<table style="width:100%" class="info_table">
         	<tr>
             	<th>Connect with Us</th>
-            	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
-            	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
-            	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
+            	<th><a href="about.html" style="color:white; text-decoration:none;">About</th>
+            	<th><a href="faq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+            	<th><a href="discover.html" style="color:white; text-decoration:none;">Discover</a></th>
            	 
         	</tr>
          	<tr>
