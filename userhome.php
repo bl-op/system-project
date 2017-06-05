@@ -24,8 +24,8 @@ include("session.php");
       <h1 style="text-align: center">User Profile</h1>
 
       <p style="text-align: center"><b>About Me</b><br><br>
-      First Name: <?php echo $row['firstname'];?>
-      Last Name: <?php echo $row['lastname'];?>
+      First Name: <?php echo $row['firstname'];?><br>
+      Last Name: <?php echo $row['lastname'];?><br>
       Email: <?php echo $row['email'];?>
       </p>
 
