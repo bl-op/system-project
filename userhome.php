@@ -14,7 +14,7 @@ include("session.php");
     <header>
       <div class="navibar">
         <a href="logout.php">Logout</a> 
-        <a href="myprofile.php">Profile</a>
+        <a href="userhome.php">Profile</a>
         <a href="newproject.php">Start a Project</a>
         <a href="myhome.php">Home</a>
       </div>
@@ -23,8 +23,11 @@ include("session.php");
     <div class="profilecontainer">
       <h1 style="text-align: center">User Profile</h1>
 
-      <p style="text-align: center">About Me<br><br>
-      <?php echo $row['firstname']." ".$row['lastname']; ?></p>
+      <p style="text-align: center"><b>About Me</b><br><br>
+      First Name: <?php echo $row['firstname'];?>
+      Last Name: <?php echo $row['lastname'];?>
+      Email: <?php echo $row['email'];?>
+      </p>
 
       <!-- to insert project history? -->
     </div>
