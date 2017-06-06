@@ -25,20 +25,6 @@
         <link rel="stylesheet" href="resources\css\stylesheet.css">
     </head>
     <header>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div class="navibar">
-        <ul>
-            <a href="signup.html">Sign Up</a>                
-            <a href="login.html">Login</a>
-            <a href="#">About</a>
-            <a href="carifund.php">Home</a>
-        </ul>
-    </div>
-    </header>
-=======
-=======
->>>>>>> origin/userprofile
         <div class="navibar">
             <a href="logout.php">Logout</a>
             <a href="userhome.php">Profile</a>               
@@ -46,10 +32,6 @@
             <a href="myhome.php">Home</a>
         </div>
         </header>
-<<<<<<< HEAD
->>>>>>> refs/remotes/origin/master
-=======
->>>>>>> origin/userprofile
     <body>
 
     <!-- insert details here -->
@@ -72,22 +54,9 @@
     <table style="width:100%" class="info_table">
           <tr>
               <th>Connect with Us</th>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <th><a href="#" style="color:white; text-decoration:none;">About</th>
-              <th><a href="#" style="color:white; text-decoration:none;">FAQ</a></th>
-              <th><a href="#" style="color:white; text-decoration:none;">Discover</a></th>
-             
-=======
               	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
             	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
             	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
->>>>>>> refs/remotes/origin/master
-=======
-              	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
-            	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
-            	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
->>>>>>> origin/userprofile
           </tr>
           <tr>
               <td><a href="emailus.html" style="color:white; text-decoration:none;">Email</a></td>
@@ -98,8 +67,4 @@
       </table>
     </footer>
 
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> refs/remotes/origin/master
