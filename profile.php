@@ -18,11 +18,6 @@
   $result = $sth->fetchAll();
   $history = $sth->fetchAll();
 
-  if (mysqli_num_rows($history_r) != 0) {
-    $rows = mysqli_fetch_array($history_r);
-  } else {
-    echo "No record found";
-  }
 ?>
 
 <html>
