@@ -16,7 +16,8 @@
   $sth1 = $pdo->query('SELECT * FROM cfProjects WHERE owner='.$_GET['id']);
   
   $result = $sth->fetchAll();
-  $history = $sth1->fetchAll();
+  $user = $sth1[0]['owner'];
+  $history = mysql_query("SELECT * FROM cfprojects WHERE owner = $user;"); 
 
 ?>
 
@@ -47,13 +48,19 @@
       Email: <?php echo $result[0]["email"]?><br><br>
 
       Project History<br>
-      <?php
-      
-      foreach($history as $row) {
-          echo $history[0]['projectTitle'].'<br/>';
-      }
-      ?>
-      </p>
+      <?php 
+      if (mysql_num_rows($history) > 0){ 
+      //check if projects available
+        
+        while($row = mysql_fetch_assoc($history)){
+          echo $history[0]['projectTitle'].<'br/'>
+
+        } else {
+          echo "No projects found";
+        }
+        
+
+      }  ?> 
 
     </div>
 
