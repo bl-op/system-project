@@ -16,7 +16,7 @@
   $sth1 = $pdo->query('SELECT * FROM cfProjects WHERE owner='.$_GET['id']);
   
   $result = $sth->fetchAll();
-  $history = $sth->fetchAll();
+  $history = $sth1->fetchAll();
 
 ?>
 
@@ -47,8 +47,11 @@
       Email: <?php echo $result[0]["email"]?><br><br>
 
       Project History<br>
-
-      <?php echo $history[0]['projectTitle'];?>
+      <?php 
+      foreach ($history as $row) {
+        echo $history[0]['projectTitle'];
+      }
+      ?>
       </p>
 
     </div>
