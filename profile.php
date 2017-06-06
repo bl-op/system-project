@@ -53,9 +53,9 @@
       //check if projects available
         
         while($row = mysql_fetch_assoc($history)){
-          echo $history[0]['projectTitle'].<'br/'>
+          echo $history[0]['projectTitle'] ?><br>
 
-        } else {
+        <?php } else {
           echo "No projects found";
         }
         
