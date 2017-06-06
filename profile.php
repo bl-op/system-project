@@ -49,11 +49,11 @@
       Project History<br>
       <?php
       if($history) > 0){
-        while($row = mysql_fetch_assoc($history)){ ?>
-          <?php echo $history[0]["projectTitle"];?><br>
+        while($row = mysql_fetch_assoc($history)){
+          echo $history[0]["projectTitle"];?><br>
         <?php } ?> 
       <?php } else{ ?>
-        <? echo "No projects found."
+        <?php echo "No projects found."
       } ?>
       </p>
 
