@@ -47,11 +47,6 @@
       Email: <?php echo $result[0]["email"]?><br><br>
 
       Project History<br>
-      <!--<?php 
-      foreach ($history as $row) {
-        echo $history[0]['projectTitle'];
-      }
-      ?> -->
 
       <?php echo $history[0]['projectTitle'];?>
       </p>
