@@ -56,8 +56,7 @@
           echo $history[0]['projectTitle'] ?><br>
 
         <?php } ?> 
-      <?php } ?>
-      <?php else {
+      <?php } else {
           echo "No projects found";
         } ?>
 
