@@ -49,8 +49,11 @@
       Project History<br>
       <?php 
       foreach ($history as $row) {
-        echo $history['projectTitle'];?><br>
-      <?php } ?>
+        if ($history != 0) {
+        echo $history['projectTitle']; ?><br>
+        <? } else { 
+          echo "No projects found"
+        } ?>
       </p>
 
     </div>
