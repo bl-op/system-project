@@ -47,14 +47,14 @@
       Email: <?php echo $result[0]["email"]?><br><br>
 
       Project History<br>
-      <?php
-      if($history) > 0){
-        while($row = mysql_fetch_assoc($history)){
-          echo $history[0]["projectTitle"];?><br>
-        <?php } ?> 
-      <?php } else{ ?>
-        <?php echo "No projects found."
-      } ?>
+      <?php 
+      foreach ($history as $row) 
+        if ($history != 0) {
+        echo $history[0]['projectTitle']."<br/>"
+      } else {
+        echo "No projects found."
+      }
+      ?>
       </p>
 
     </div>
