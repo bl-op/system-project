@@ -16,7 +16,7 @@
   $sth1 = $pdo->query('SELECT * FROM cfProjects WHERE owner='.$_GET['id']);
   
   $result = $sth->fetchAll();
-  $history_r = mysqli_query($sth1)
+  $history = $sth->fetchAll();
 
   if (mysqli_num_rows($history_r) != 0) {
     $rows = mysqli_fetch_array($history_r);
@@ -52,8 +52,11 @@
       Email: <?php echo $result[0]["email"]?><br><br>
 
       Project History<br>
-      <?php echo $rows['projectTitle'];?>
-      
+      <?php 
+      foreach ($history as $row) {
+        echo $history[0]['projectTitle'];
+      }
+      ?>
       </p>
 
       
