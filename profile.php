@@ -49,9 +49,8 @@
       Project History<br>
       <?php 
       foreach ($history as $row) {
-        echo $history[0]['projectTitle'];
-      }
-      ?>
+        echo $history[0]['projectTitle'];?><br>
+      <?php } ?>
       </p>
 
     </div>
