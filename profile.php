@@ -55,12 +55,11 @@
         while($row = mysql_fetch_assoc($history)){
           echo $history[0]['projectTitle'] ?><br>
 
-        <?php } else {
+        <?php } ?> 
+      <?php } ?>
+      <?php else {
           echo "No projects found";
-        }
-        
-
-      }  ?> 
+        } ?>
 
     </div>
 
