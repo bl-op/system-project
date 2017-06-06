@@ -50,9 +50,9 @@
       <?php 
       foreach ($history as $row) 
         if ($history != 0) {
-        echo $history[0]['projectTitle']."<br/>"
+        echo $history[0]['projectTitle']."<br/>";
       } else {
-        echo "No projects found."
+        echo "No projects found.";
       }
       ?>
       </p>
