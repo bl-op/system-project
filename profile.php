@@ -49,7 +49,7 @@
       Project History<br>
       <?php 
       foreach ($history as $row) {
-        echo $history[0]['projectTitle'];?><br>
+        echo $history['projectTitle'];?><br>
       <?php } ?>
       </p>
 
