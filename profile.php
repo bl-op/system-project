@@ -47,13 +47,12 @@
       Email: <?php echo $result[0]["email"]?><br><br>
 
       Project History<br>
-      <?php 
-      foreach ($history as $row) {
-        if ($history != 0) {
-          echo $history['projectTitle']; ?><br>
-        <? } else { 
-          echo "No projects found"
-        } ?>
+      <?php
+      
+      foreach($history as $row) {
+          echo $history[0]['projectTitle'].'<br/>';
+      }
+      ?>
       </p>
 
     </div>
