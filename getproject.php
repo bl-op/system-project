@@ -51,6 +51,8 @@ if($conn ) {
 
  #========= Get latest project operation ends 
 
+ #========= Get category
+
 #get poverty
 $poverty =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Poverty' ");
 
@@ -69,6 +71,6 @@ $environment =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Env
 #get other
 $other =mysql_query("SELECT * FROM cfProjects WHERE projectCategory = 'Other' ");
 
-
+#========= Get catepgory ends 
 
  ?>

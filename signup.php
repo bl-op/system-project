@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
     <head>
         <title>Sign Up</title>
@@ -8,14 +11,20 @@
     <body>
         <header>
         <div class="navibar">
-            <a href="signup.html">Sign Up</a>
+            <a href="signup.php">Sign Up</a>
             <a href="login.html">Login</a>
             <a href="about.html">About</a>
             <a href="carifund.php">Home</a>
         </div>
         </header>
+        <?php
+        if (isset($_SESSION['error'])) {
+            echo '<p class="message"> '.$_SESSION['error'].'</p>';
+            unset($_SESSION['error']);
+            }
+        ?>
         <div class="signupform">
-            <form action="login.html">
+            <form action="login.php">
                 	<p style="font-family:Trebuchet MS; font-size: 13px;color:dimgray">Already a member?</p>
                 	<button><b>Login!</b></button>
             </form>

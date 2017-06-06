@@ -26,10 +26,10 @@
     </head>
     <header>
         <div class="navibar">
-            <a href="logout.php">Logout</a>
-            <a href="userhome.php">Profile</a>               
-            <a href="newproject.php">Start a Project</a>
-            <a href="myhome.php">Home</a>
+            <a href="signup.php">Sign Up</a>
+            <a href="login.php">Login</a>
+            <a href="about.html">About</a>
+            <a href="carifund.php">Home</a>
         </div>
         </header>
     <body>
@@ -54,9 +54,9 @@
     <table style="width:100%" class="info_table">
           <tr>
               <th>Connect with Us</th>
-              	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
-            	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
-            	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
+              	<th><a href="about.html" style="color:white; text-decoration:none;">About</th>
+            	<th><a href="faq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+            	<th><a href="discover.html" style="color:white; text-decoration:none;">Discover</a></th>
           </tr>
           <tr>
               <td><a href="emailus.html" style="color:white; text-decoration:none;">Email</a></td>

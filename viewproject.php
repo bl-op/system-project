@@ -29,8 +29,8 @@
     <body>
     <header>
         <div class="navibar">
-            <a href="signup.html">Sign Up</a>
-            <a href="login.html">Login</a>
+            <a href="signup.php">Sign Up</a>
+            <a href="login.php">Login</a>
             <a href="about.html">About</a>
             <a href="carifund.php">Home</a>
         </div>
@@ -88,9 +88,25 @@
         <div class="fb-save" data-uri="https://www.google.com" data-size="small"></div>
       </div>
       
+      <div class="vieworganizer">
+      <?php
+      include ("connection.php");
+      $owner = $result[0]['owner']; //owner who created the project
+      if ($owner != 0){
+      $id = mysql_query("SELECT * FROM cfusers WHERE userID = $owner;"); //find userid from cfusers that match with the owner id of project
+      $row = mysql_fetch_assoc($id);
+      $viewowner = $row['userID']; //get userID
+      ?>
       <!--Owner of the Project Here-->
-      <h3 style="margin-bottom:3px"><?php echo $result[0]['ownerID'] ?></h3>
+      <h3 style="margin-bottom:3px"><a href="profile.php?id=<?php echo $viewowner; ?>"><?php echo $result[0]['ownerID'] ?></a></h3>
       <p style="margin-top:0px">Organizer</p>
+      <?php }else{ ?>
+        <!--Default Carifund Project Here-->
+        <h3 style="margin-bottom:3px"><?php echo $result[0]['ownerID'] ?></h3>
+        <p style="margin-top:0px">Organizer</p>
+      <?php }?>
+      
+      </div>
       
       <div style="background-color:mediumseagreen; width:100%; height:10px; margin: 10px 0px"></div>
       

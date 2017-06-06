@@ -9,12 +9,11 @@
     <body>
         <header>
         <div class="navibar">
-            <ul>
-                <li><a href="signup.html">Sign Up</a></li>                
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="carifund.html">Home</a></li>
-            </ul>
+            <p class="navbartext">Logged in as <?php echo $row['firstname']." ".$row['lastname']; ?>. Welcome back!</p>
+            <a href="logout.php">Logout</a> 
+            <a href="userhome.php">Profile</a>             
+            <a href="newproject.php">Start a Project</a>
+            <a href="myhome.php">Home</a>
         </div>
         </header>
         <div style="text-align: center; padding: 20% 0px">
@@ -28,9 +27,9 @@
           	<table style="width:100%" class="info_table">
                 	<tr>
                     	<th>Connect with Us</th>
-                    	<th><a href="#" style="color:white; text-decoration:none;">About</th>
-                    	<th><a href="#" style="color:white; text-decoration:none;">FAQ</a></th>
-                    	<th><a href="#" style="color:white; text-decoration:none;">Discover</a></th>
+                    	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
+                    	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+                    	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
                    	 
                 	</tr>
                  	<tr>
