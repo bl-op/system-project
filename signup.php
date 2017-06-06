@@ -12,7 +12,7 @@ session_start();
         <header>
         <div class="navibar">
             <a href="signup.php">Sign Up</a>
-            <a href="login.html">Login</a>
+            <a href="login.php">Login</a>
             <a href="about.html">About</a>
             <a href="carifund.php">Home</a>
         </div>
