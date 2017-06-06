@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
@@ -26,7 +26,7 @@ if(!empty($_POST['new-project'])) {
   $owner =  $_POST[ 'owner' ];
   
   if(empty($_POST['projectImg'])){
-    $projectImg = "NONE";
+    $projectImg = "resources/carifund.png";
   } else {
     $projectImg = $_POST['projectImg'];
   }
@@ -56,8 +56,8 @@ if(!empty($_POST['create'])) {
       exit("Invalid email address"); 
   $select = mysql_query("SELECT `email` FROM `cfUsers` WHERE `email` = '".$_POST['email']."'") or exit(mysql_error());
   if(mysql_num_rows($select)){
-      echo "This email is already being used.";
-      header("Location: signup.html");
+      header("Location: signup.php");
+      $_SESSION['error'] = "Sorry! This email is already being used.";
       exit;
   }   
   
@@ -68,10 +68,10 @@ if(!empty($_POST['create'])) {
 
    if($retval){
      echo "New member added!<br>";
-     header("Location: login.html");
+     header("Location: login.php");
    } else {
      echo "Error!<br>" . mysql_error();
-     header("Location: signup.html");
+     header("Location: signup.php");
    }
 
 }

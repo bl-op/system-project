@@ -1,40 +1,66 @@
 <?php
-
-ob_start();
 session_start();
-  $dbhost = 'localhost';
-  $dbuser = 'root';
-  $dbpass = '';
-  $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-
-  if($conn ) {
-    echo "Connected successfully.<br>";
-  } else {
-     die('Could not connect: ' . mysql_error());
-   }
-
-   mysql_select_db('Carifund');
-   
-$useremail=$_POST['useremail']; 
-$userpassword=$_POST['userpassword']; 
-
-// protect SQL injection
-$useremail = mysql_real_escape_string($useremail);
-$userpassword = mysql_real_escape_string($userpassword);
-$result=mysql_query("SELECT * FROM cfUsers WHERE email='$useremail' and password='$userpassword'");
-$row=mysql_fetch_array($result);
-// count table row
-$count=mysql_num_rows($result);
-
-// table row is 1 row when $useremail and $userpassword is valid
-if($count==1){
-
-$_SESSION['userID'] = $row['userID']; // initialize session
-header("location:myhome.php");
-}
-else {
-echo "Wrong Username or Password";
-header("location:login.html");
-}
-ob_end_flush();
 ?>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resources\css\stylesheet.css">
+    </head>
+    <body>
+        <header>
+        <div class="navibar">
+            <a href="signup.php">Sign Up</a>
+            <a href="login.php">Login</a>
+            <a href="about.html">About</a>
+            <a href="carifund.php">Home</a>
+        </div>
+        </header>
+        <?php
+        if (isset($_SESSION['error'])) {
+            echo '<p class="message"> '.$_SESSION['error'].'</p>';
+            unset($_SESSION['error']);
+            }
+        ?>
+        <div class="loginform">
+            <form action="loginvalid.php" method="post">
+                	<h1 style="font-family:Trebuchet MS;color:dimgray; text-align: center;">Welcome!</h1>
+                	<label style="color:dimgray"><b> Email </b></label>
+                 	<input type="text" placeholder="Enter Email" name="useremail">
+                	<br></br>
+                	<label style="color:dimgray"><b> Password</b></label>
+                	<input type="password" placeholder="Enter password" name="userpassword">
+                    <br></br>
+                	<input type="submit" name="login" class="btn" value="Login!">
+                    </form>
+                    
+            <form action="signup.php">
+                	<p style="font-family:Trebuchet MS; size:big;color:dimgray">Are you new? Join us now!</p>
+                	<button><b>Sign up!</b></button>
+            </form>
+        </div>
+
+       <div class="info">
+
+
+          	<table style="width:100%" class="info_table">
+                	<tr>
+                    	<th>Connect with Us</th>
+                    	<th><a href="about.html" style="color:white; text-decoration:none;">About</th>
+                    	<th><a href="faq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+                    	<th><a href="discover.html" style="color:white; text-decoration:none;">Discover</a></th>
+                   	 
+                	</tr>
+                 	<tr>
+                     	<td><a href="emailus.html" style="color:white; text-decoration:none;">Email</a></td>
+                 	</tr>
+                 	<tr>
+                     	<td><a href="https://www.facebook.com/" style="color:white; text-decoration:none;">Facebook</a></td>
+                 	</tr>
+            	</table>
+
+
+     	</div>
+    </body>
+</html>

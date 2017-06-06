@@ -125,7 +125,7 @@ body{
 .loginform{
 	height:420px;
 	width:290px;
-	margin:80px 530px;
+	margin:70px 530px;
 	border: 10px #CCC solid;
 	background:white;
 	padding:10px;
@@ -152,7 +152,7 @@ body{
 .signupform{
 	height:490px;
 	width:290px;
-	margin:80px 530px;
+	margin:70px 530px;
 	border: 10px #CCC solid;
 	background:white;
 	padding:10px;
@@ -394,4 +394,14 @@ body{
 	text-align: center;
 	margin-top: 110px;
 	margin-bottom: 119px;
+}
+
+.vieworganizer a {
+	text-decoration: none;
+}
+
+.message {
+	text-align: center;
+	margin-left: 55px;
+	color: red;
 }

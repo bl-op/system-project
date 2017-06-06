@@ -20,7 +20,7 @@
  $row=mysql_fetch_array($result);
  // if session is not set, return to login page
  if( !isset($_SESSION[ 'userID' ]) ) {
-     header("Location: login.html");
+     header("Location: login.php");
      exit;
      }
 ?>

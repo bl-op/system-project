@@ -13,9 +13,4 @@ if($conn ) {
  
  mysql_select_db('Carifund');
 
- $id = mysqli_query("SELECT owner FROM cfProjects");
- $result = mysqli_query("SELECT * FROM cfUsers WHERE userID='$id'");
- $row = mysql_fetch_array($result);
- $viewowner = $row['userID'];
-
  ?>
