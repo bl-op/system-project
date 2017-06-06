@@ -47,15 +47,15 @@
       Email: <?php echo $result[0]["email"]?><br><br>
 
       Project History<br>
-      <?php 
+      <!--<?php 
       foreach ($history as $row) {
         echo $history[0]['projectTitle'];
       }
-      ?>
+      ?> -->
+
+      <?php echo $history[0]['projectTitle'];?>
       </p>
 
-      
-      <!-- to insert project history? -->
     </div>
 
     </body>
