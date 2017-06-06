@@ -26,6 +26,7 @@
     </head>
     <header>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="navibar">
         <ul>
             <a href="signup.html">Sign Up</a>                
@@ -36,6 +37,8 @@
     </div>
     </header>
 =======
+=======
+>>>>>>> origin/userprofile
         <div class="navibar">
             <a href="logout.php">Logout</a>
             <a href="userhome.php">Profile</a>               
@@ -43,7 +46,10 @@
             <a href="myhome.php">Home</a>
         </div>
         </header>
+<<<<<<< HEAD
 >>>>>>> refs/remotes/origin/master
+=======
+>>>>>>> origin/userprofile
     <body>
 
     <!-- insert details here -->
@@ -67,6 +73,7 @@
           <tr>
               <th>Connect with Us</th>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <th><a href="#" style="color:white; text-decoration:none;">About</th>
               <th><a href="#" style="color:white; text-decoration:none;">FAQ</a></th>
               <th><a href="#" style="color:white; text-decoration:none;">Discover</a></th>
@@ -76,6 +83,11 @@
             	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
             	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
 >>>>>>> refs/remotes/origin/master
+=======
+              	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
+            	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+            	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
+>>>>>>> origin/userprofile
           </tr>
           <tr>
               <td><a href="emailus.html" style="color:white; text-decoration:none;">Email</a></td>
