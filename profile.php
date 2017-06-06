@@ -13,8 +13,10 @@
   $pdo = new PDO($dsn, $user, $pass, $opt);
   
   $sth = $pdo->query('SELECT * FROM cfUsers WHERE userID='.$_GET['id']);
+  $sth1 = $pdo->query('SELECT * FROM cfProjects WHERE owner='.$_GET['id']);
   
   $result = $sth->fetchAll();
+  $history = $sth1->fetchAll();
 ?>
 
 <html>
@@ -41,10 +43,13 @@
       <p style="text-align: center">About Me<br><br>
       First Name: <?php echo $result[0]["firstname"]?><br>
       Last Name: <?php echo $result[0]["lastname"]?><br>
-      Email: <?php echo $result[0]["email"]?>
+      Email: <?php echo $result[0]["email"]?><br><br>
+
+      Project History<br>
+      <?php echo $history[0]["projectTitle"];?>
       </p>
 
-
+      
       <!-- to insert project history? -->
     </div>
 
@@ -54,9 +59,9 @@
     <table style="width:100%" class="info_table">
           <tr>
               <th>Connect with Us</th>
-              	<th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
-            	<th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
-            	<th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
+                <th><a href="userabout.html" style="color:white; text-decoration:none;">About</th>
+              <th><a href="userfaq.html" style="color:white; text-decoration:none;">FAQ</a></th>
+              <th><a href="userdiscover.html" style="color:white; text-decoration:none;">Discover</a></th>
           </tr>
           <tr>
               <td><a href="emailus.html" style="color:white; text-decoration:none;">Email</a></td>
