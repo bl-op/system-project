@@ -46,7 +46,14 @@
       Email: <?php echo $result[0]["email"]?><br><br>
 
       Project History<br>
-      <?php echo $history[0]["projectTitle"];?>
+      <?php
+      if(mysql_num_rows($history) > 0){
+        while($row = mysql_fetch_assoc($history)){ ?>
+          <?php echo $history[0]["projectTitle"];?><br>
+        <?php } ?> 
+      <?php } else{ ?>
+        No projects found.
+      <?php } ?>
       </p>
 
       
