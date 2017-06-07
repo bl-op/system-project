@@ -51,15 +51,18 @@
       include ("connection.php");
 
       $owner = $user[0]['owner']; //get the owner (key)
-      $history = mysql_query("SELECT * FROM cfprojects WHERE owner = $owner;");
 
-      if ($history != 0) {
-        while ($rows = mysqli_fetch_array($history)) {
-          echo $rows['projectTitle'];
-        }
+      //History query
+      $history = mysql_query("SELECT * FROM cfprojects WHERE owner = $owner;");
+      //History result
+      while ($row = mysql_fetch_array($history)) {
+        $data[] = $row;
       }
+      foreach ($data as $row) {
+        ?> <a href="viewproject.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']."<br/>"; ?>
+      <?php }
       ?> 
-      
+
       </p>
 
     </div>
