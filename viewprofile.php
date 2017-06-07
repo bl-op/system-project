@@ -13,8 +13,10 @@
   $pdo = new PDO($dsn, $user, $pass, $opt);
   
   $sth = $pdo->query('SELECT * FROM cfUsers WHERE userID='.$_GET['id']);
+  $sth1 = $pdo->query('SELECT * FROM cfProjects WHERE owner='.$_GET['id']);
   
   $result = $sth->fetchAll();
+  $user = $sth1->fetchAll();
 ?>
 
 <html>
@@ -26,26 +28,40 @@
     </head>
     <header>
         <div class="navibar">
-            <a href="signup.php">Sign Up</a>
-            <a href="login.php">Login</a>
-            <a href="about.html">About</a>
-            <a href="carifund.php">Home</a>
+            <a href="logout.php">Logout</a>
+            <a href="userhome.php">Profile</a>               
+            <a href="newproject.php">Start a Project</a>
+            <a href="myhome.php">Home</a>
         </div>
         </header>
     <body>
 
     <!-- insert details here -->
-    <div class="profilecontainer">
+    <div class="profilecontainer" style="text-align: center;">
       <h1 style="text-align: center">User Profile</h1>
 
       <p style="text-align: center">About Me<br><br>
       First Name: <?php echo $result[0]["firstname"]?><br>
       Last Name: <?php echo $result[0]["lastname"]?><br>
-      Email: <?php echo $result[0]["email"]?>
+      Email: <?php echo $result[0]["email"]?><br><br>
+
+      Project History<br>
+      <?php
+      include ("connection.php");
+      $owner = $user[0]['owner']; //get the owner (key)
+      //History query
+      $history = mysql_query("SELECT * FROM cfprojects WHERE owner = $owner;");
+      //History result
+      while ($row = mysql_fetch_array($history)) {
+        $data[] = $row;
+      }
+      foreach ($data as $row) {
+        ?> <a href="viewproject.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']."<br/>"; ?>
+      <?php }
+      ?> 
+
       </p>
 
-
-      <!-- to insert project history? -->
     </div>
 
     </body>

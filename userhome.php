@@ -20,7 +20,7 @@ include("session.php");
       </div>
         </header>
   
-    <div class="profilecontainer">
+    <div class="profilecontainer" style="text-align: center;">
       <h1 style="text-align: center">User Profile</h1>
 
       <p style="text-align: center"><b>About Me</b><br><br>
@@ -29,7 +29,23 @@ include("session.php");
       Email: <?php echo $row['email'];?>
       </p>
 
-      <!-- to insert project history? -->
+      Project History<br>
+      <?php
+      include("connection.php");
+      $owner = $row['userID'];
+      //History query
+      $history = mysql_query("SELECT * FROM cfprojects WHERE owner = $owner;");
+      //History result
+      while ($row = mysql_fetch_array($history)) {
+        $data[] = $row;
+      }
+      foreach ($data as $row) {
+        ?> <a href="project.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']."<br/>"; ?>
+      <?php }
+      ?> 
+
+      </p>
+
     </div>
       <div class="info" style="position: absolute; bottom:0; left: 0; right: 0;">
             <table style="width:100%" class="info_table">
