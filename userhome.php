@@ -31,9 +31,7 @@ include("session.php");
 
       <!-- to insert project history? -->
     </div>
-      <div class="info">
-
-
+      <div class="info" style="position: absolute; bottom:0; left: 0; right: 0;">
             <table style="width:100%" class="info_table">
                   <tr>
                       <th>Connect with Us</th>
