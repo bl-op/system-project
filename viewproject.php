@@ -72,22 +72,13 @@
         <div id="donationProgress">
       </div></div>
       
-      <form action="forms.php" method="post" style="margin-top:3px">
-        <input type="number" id="amount" name="amount" style="width: 100px; border-radius:10px" min="5" required>
-        <input type="submit" VALUE="Donate" name="donate" id="donate">
-      <div style="display:none">
-        <input type="text" id="userID" name="userID">
-        <input type="text" id="projID" name="projID">
-      </div>
-      </form>
-
       
-      <div style="margin-top:10px">
+      <div style="margin-top: 10px;">
         <div class="fb-like" data-href="https://www.google.com" data-layout="button_count" 
         data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
         <div class="fb-save" data-uri="https://www.google.com" data-size="small"></div>
       </div>
-      
+      <br><br>
       <div class="vieworganizer">
       <?php
       include ("connection.php");
@@ -98,7 +89,7 @@
       $viewowner = $row['userID']; //get userID
       ?>
       <!--Owner of the Project Here-->
-      <h3 style="margin-bottom:3px"><a href="profile.php?id=<?php echo $viewowner; ?>"><?php echo $result[0]['ownerID'] ?></a></h3>
+      <h3 style="margin-bottom:3px"><a href="viewprofile.php?id=<?php echo $viewowner; ?>"><?php echo $result[0]['ownerID'] ?></a></h3>
       <p style="margin-top:0px">Organizer</p>
       <?php }else{ ?>
         <!--Default Carifund Project Here-->
@@ -107,7 +98,6 @@
       <?php }?>
       
       </div>
-      
       <div style="background-color:mediumseagreen; width:100%; height:10px; margin: 10px 0px"></div>
       
        <h3 id="description">Project Details</h3>
@@ -162,4 +152,5 @@ function fillHiddenForm(){
     document.getElementById("projID").value = <?php echo $result[0]["projectID"]?>;
     document.getElementById("userID").value = "ASK1";
 }
+
 </script>
