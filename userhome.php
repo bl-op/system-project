@@ -28,6 +28,7 @@ include("session.php");
       Last Name: <?php echo $row['lastname'];?><br>
       Email: <?php echo $row['email'];?>
       </p>
+      <br></br>
 
       Project History<br>
       <?php
@@ -35,14 +36,14 @@ include("session.php");
       $owner = $row['userID'];
       //History query
       $history = mysql_query("SELECT * FROM cfprojects WHERE owner = $owner;");
+      if (mysql_num_rows($history) > 0){ //check if projects available
       //History result
-      while ($row = mysql_fetch_array($history)) {
-        $data[] = $row;
-      }
-      foreach ($data as $row) {
-        ?> <a href="project.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']."<br/>"; ?>
-      <?php }
-      ?> 
+      while ($row = mysql_fetch_array($history)) { ?>
+       <a href="project.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']."<br/>"; ?></a>
+      <?php } ?>
+      <?php }else{ ?>
+      <p>You have not created any project yet</p>
+      <?php } ?>
 
       </p>
 

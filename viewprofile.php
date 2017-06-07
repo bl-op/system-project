@@ -28,10 +28,10 @@
     </head>
     <header>
         <div class="navibar">
-            <a href="logout.php">Logout</a>
-            <a href="userhome.php">Profile</a>               
-            <a href="newproject.php">Start a Project</a>
-            <a href="myhome.php">Home</a>
+            <a href="signup.php">Sign Up</a>
+            <a href="login.php">Login</a>
+            <a href="about.html">About</a>
+            <a href="carifund.php">Home</a>
         </div>
         </header>
     <body>
