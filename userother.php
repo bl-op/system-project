@@ -27,7 +27,7 @@ include ("getproject.php");
         while($row = mysql_fetch_assoc($other)){ ?>
         <div class="categoryinfo">
             <img src="<?php echo $row['projectImg']; ?>" class="categoryimg">
-            <h2><a href="viewproject.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']; ?></a><h2>
+            <h2><a href="project.php?id=<?php echo $row['projectID']; ?>"><?php echo $row['projectTitle']; ?></a><h2>
             <p style="font-size: 17px;"><?php echo $row['beneficiary']; ?><p>
             <p style="font-size: 15px;">Description: <br></br><?php echo $row['projectDesc']; ?></p>
             <br></br>
